@@ -8,7 +8,7 @@ In this manuscript, we focus mainly on issues along the read path for each table
 
 == Metadata Files <metadata_management>
 
-A table format is a metadata layer on top of data files in a particular storage format. In this section, we compare how this metadata is managed when changes are being made to a table, based on the specification and our observations in different execution environments. TODO
+A table format is a metadata layer on top of data files in a particular storage format. In this section, we compare how this metadata is managed when changes are being made to a table, based on the specification and our observations in different execution environments.
 
 #include "specification.typ"
 
