@@ -37,7 +37,7 @@ ALTER TABLE catalog.schema.database EXECUTE optimize(file_size_threshold => '1GB
 
 For Hive, this only works if the `hive.non_transactional_optimize_enabled` session property is set. Since Hive is not transactional, it will read, write, and delete the original files. For Delta Lake, `delta.enable-non-concurrent-writes` must be set when using S3 as the storage system.
 
-The `optimize` procedure will only combine smaller files, but will not not split files that are too large. For this, the file size caps introduced in @file_sizes should be used.
+The `optimize` procedure will only combine smaller files, but will not split files that are too large. For this, the file size caps introduced in @file_sizes should be used.
 
 The `optimize` procedure does not currently allow for reordering of data.
 

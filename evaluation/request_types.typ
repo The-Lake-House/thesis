@@ -54,7 +54,7 @@ On the write path, we find `GetObject`, `HeadObject`, `ListObjectsV2`, `PutObjec
   ),
 )
 
-Even Iceberg (MoR) uses 4 `ListObjectsV2` calls for each insertion. Delta Lake (Without Deletion Vectors) uses 9, Hive 67, Hudi (CoW) 75, and Hudi (MoR) 76. When a a new partition is created, both Hudi (CoW) and Hudi (MoR) use 87 calls.
+Even Iceberg (MoR) uses 4 `ListObjectsV2` calls for each insertion. Delta Lake (Without Deletion Vectors) uses 9, Hive 67, Hudi (CoW) 75, and Hudi (MoR) 76. When a new partition is created, both Hudi (CoW) and Hudi (MoR) use 87 calls.
 
 
 === Conclusions

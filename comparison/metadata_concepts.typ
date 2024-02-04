@@ -64,7 +64,7 @@ Within the base directory, there are two subdirectories: `data` and `metadata`. 
   ),
 ) <iceberg_metadata_hierarchy>
 
-Each data file is described by a manifest file, which contains contains the location and statistics of the file. Manifest files are grouped into a manifest list, which represents all the data files contained in a snapshot. All snapshots are listed in the table metadata files, including other table metadata. Each snapshot has its own manifest list, but can reuse previous manifest files.
+Each data file is described by a manifest file, which contains the location and statistics of the file. Manifest files are grouped into a manifest list, which represents all the data files contained in a snapshot. All snapshots are listed in the table metadata files, including other table metadata. Each snapshot has its own manifest list, but can reuse previous manifest files.
 
 The table metadata files are JSON files that begin with a five-digit, zero-padded sequential number (e.g., `00000`) (see _Appendix C: JSON serialization_ in @IcebergTableSpec). Notable fields are `format-version`, `properties`, `current-snapshot-id`, `snapshots`, `snapshot-log`, and `metadata-log`. `properties` is a nested JSON object containing table properties such as `write.merge.mode`, `write.delete.mode`, `write.update.mode`, and other table properties (see @table_types). `snapshots` is an array containing snapshot objects. Notable fields of a snapshot are `snapshot-id` and `manifest-list`. `manifest-list` provides the path to the manifest list for that snapshot. `current-snapshot-id` contains the `snapshot-id` of the current snapshot. `snapshots` can be used for time travel.
 
