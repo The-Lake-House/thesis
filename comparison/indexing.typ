@@ -1,0 +1,19 @@
+=== Indexing <indexing>
+
+Besides the table statistics discussed in the previous subsection, other indexing techniques are not yet common in table formats. In this category, Hudi offers the most functionality: a record index that supports primary key lookups and Bloom filters.
+
+==== Hudi
+
+Hudi is built around upserts: in fact, Hudi is short for _Hadoop Upserts Deletes and Incrementals_. For upserts to be efficient, individual records must be found quickly. Hudi associates a record key with each record, which is either automatically generated (the default since Hudi 0.14, which is why we have not mentioned it yet @HudiRelease14) or derived from the data. This record key is used as a primary key during upserts. Record keys are embedded in the Parquet file along with other transactional metadata (see @supported_storage_formats). By default, there is no index that maps record keys to their partition and data file.
+
+Hudi 0.14 introduced a record index in the Hudi metadata table @HudiRelease14, which can be enabled by setting `hoodie.metadata.record.index.enable` @HudiRFC08. For Hudi to use the index, `hoodie.index.type=RECORD_INDEX` must also be set.
+
+Hudi also supports Bloom filters. Bloom filters are particularly useful for high cardinality attributes, and allow checking whether an individual record is likely contained within the data unit for which the Bloom filter was created.
+
+There are several Bloom filter implementations in Hudi: the first stores a Bloom filter in the Parquet metadata, and the second stores it in a Bloom filter index in the Hudi metadata table @HudiRFC37.
+
+Bloom filters of the first kind are automatically generated and stored as key-value metadata in `org.apache.hudi.bloomfilter` in the footer of the Parquet file (see @supported_storage_formats). These probably predate the Bloom filters natively supported by Parquet @ApacheParquetformatGitHuba. These Bloom filters are noticeably large and interfere with our experiments using a minimal dataset (see @scalability_table_formats). Therefore, we tried to find a way to disable them. In Hudi 0.14, the only way to disable these Bloom filters is to set `hoodie.populate.meta.fields=false`, but this only works if the automatic key generation is also disabled by explicitly setting a record key, either with `hoodie.datasource.write.recordkey.field=key` or the `primaryKey=key` table property, otherwise the following error message is thrown: "Disabling hoodie.populate.meta.fields is not supported with auto generation of record keys". Unfortunately, as the name implies, `hoodie.populate.meta.fields` also controls metadata fields other than `org.apache.hudi.bloomfilter`. When disabled, `hoodie_bloom_filter_type_code`, `hoodie_min_record_key`, and `hoodie_max_record_key` are missing from the key-value metadata, `_hoodie_commit_time`, `_hoodie_commit_seqno`, `_hoodie_record_key`, and `_hoodie_partition_path` are all set to NULL, and only `_hoodie_file_name` is still set, which contains the full file name for each row. Setting `_hoodie_record_key` to NULL leads to the next problem: log files are written in Avro by default, and Hudi cannot handle a missing `_hoodie_record_key` because deleting a record throws the following error: `org.apache.avro.AvroRuntimeException: Not a valid schema field: _hoodie_record_key`. It is currently unclear how to effectively disable Bloom filters of the first kind.
+
+Similar to statistics, Bloom filters embedded in Parquet have the disadvantage that the Parquet footer must be fetched first. Bloom filters of the second kind are therefore stored in the `bloom_filters` partition of the Hudi metadata table if `hoodie.metadata.index.bloom.filter.enable` is set. It can be used as an alternative to the record index mentioned above for index lookups by setting `hoodie.index.type=BLOOM`.
+
+Any index has the disadvantage of having to be maintained. For Hudi, this adds a lot of extra files and requests.

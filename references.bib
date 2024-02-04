@@ -1,0 +1,2573 @@
+@inproceedings{abadiColumnstoresVsRowstores2008,
+  title = {Column-Stores vs. Row-Stores: How Different Are They Really?},
+  shorttitle = {Column-Stores vs. Row-Stores},
+  booktitle = {Proceedings of the 2008 {{ACM SIGMOD}} International Conference on {{Management}} of Data},
+  author = {Abadi, Daniel J. and Madden, Samuel R. and Hachem, Nabil},
+  date = {2008-06-09},
+  series = {{{SIGMOD}} '08},
+  pages = {967--980},
+  publisher = {{Association for Computing Machinery}},
+  location = {{New York, NY, USA}},
+  doi = {10.1145/1376616.1376712},
+  url = {https://doi.org/10.1145/1376616.1376712},
+  urldate = {2024-01-13},
+  abstract = {There has been a significant amount of excitement and recent work on column-oriented database systems ("column-stores"). These database systems have been shown to perform more than an order of magnitude better than traditional row-oriented database systems ("row-stores") on analytical workloads such as those found in data warehouses, decision support, and business intelligence applications. The elevator pitch behind this performance difference is straightforward: column-stores are more I/O efficient for read-only queries since they only have to read from disk (or from memory) those attributes accessed by a query. This simplistic view leads to the assumption that one can obtain the performance benefits of a column-store using a row-store: either by vertically partitioning the schema, or by indexing every column so that columns can be accessed independently. In this paper, we demonstrate that this assumption is false. We compare the performance of a commercial row-store under a variety of different configurations with a column-store and show that the row-store performance is significantly slower on a recently proposed data warehouse benchmark. We then analyze the performance difference and show that there are some important differences between the two systems at the query executor level (in addition to the obvious differences at the storage layer level). Using the column-store, we then tease apart these differences, demonstrating the impact on performance of a variety of column-oriented query execution techniques, including vectorized query processing, compression, and a new join algorithm we introduce in this paper. We conclude that while it is not impossible for a row-store to achieve some of the performance advantages of a column-store, changes must be made to both the storage layer and the query executor to fully obtain the benefits of a column-oriented approach.},
+  isbn = {978-1-60558-102-6},
+  keywords = {c-store,column-oriented dbms,column-store,compression,invisible join,tuple materialization,tuple reconstruction},
+  file = {/home/agrueneberg/Sync/Zotero/storage/5QCS5MHU/Abadi et al. - 2008 - Column-stores vs. row-stores how different are th.pdf}
+}
+
+@online{abadiDBMSMusingsApache2017,
+  title = {{{DBMS Musings}}: {{Apache Arrow}} vs. {{Parquet}} and {{ORC}}: {{Do}} We Really Need a Third {{Apache}} Project for Columnar Data Representation?},
+  shorttitle = {{{DBMS Musings}}},
+  author = {Abadi, Daniel},
+  date = {2017-10-31},
+  url = {http://dbmsmusings.blogspot.com/2017/10/apache-arrow-vs-parquet-and-orc-do-we.html},
+  urldate = {2024-01-13},
+  organization = {{DBMS Musings}}
+}
+
+@article{abadiDesignImplementationModern2009,
+  title = {The {{Design}} and {{Implementation}} of {{Modern Column-Oriented Database Systems}}},
+  author = {Abadi, Daniel J. and Boncz, Peter A. and Harizopoulos, Stavros and Idreos, Stratos and Madden, Samuel},
+  date = {2009-08},
+  journaltitle = {Proceedings of the VLDB Endowment},
+  shortjournal = {Proc. VLDB Endow.},
+  volume = {2},
+  number = {2},
+  pages = {1664--1665},
+  issn = {2150-8097},
+  doi = {10.14778/1687553.1687625},
+  url = {https://dl.acm.org/doi/10.14778/1687553.1687625},
+  urldate = {2023-07-26},
+  abstract = {Column-oriented database systems (column-stores) have attracted a lot of attention in the past few years. Column-stores, in a nutshell, store each database table column separately, with attribute values belonging to the same column stored contiguously, compressed, and densely packed, as opposed to traditional database systems that store entire records (rows) one after the other. Reading a subset of a table's columns becomes faster, at the potential expense of excessive disk-head seeking from column to column for scattered reads or updates. After several dozens of research papers and at least a dozen of new column-store start-ups, several questions remain. Are these a new breed of systems or simply old wine in new bottles? How easily can a major row-based system achieve column-store performance? Are column-stores the answer to effortlessly support large-scale data-intensive applications? What are the new, exciting system research problems to tackle? What are the new applications that can be potentially enabled by column-stores? In this tutorial, we present an overview of column-oriented database system technology and address these and other related questions.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/FWWIMIE8/Abadi et al. - 2009 - Column-oriented database systems.pdf}
+}
+
+@article{abadiSeattleReportDatabase2022,
+  title = {The {{Seattle}} Report on Database Research},
+  author = {Abadi, Daniel and Ailamaki, Anastasia and Andersen, David and Bailis, Peter and Balazinska, Magdalena and Bernstein, Philip A. and Boncz, Peter and Chaudhuri, Surajit and Cheung, Alvin and Doan, Anhai and Dong, Luna and Franklin, Michael J. and Freire, Juliana and Halevy, Alon and Hellerstein, Joseph M. and Idreos, Stratos and Kossmann, Donald and Kraska, Tim and Krishnamurthy, Sailesh and Markl, Volker and Melnik, Sergey and Milo, Tova and Mohan, C. and Neumann, Thomas and Ooi, Beng Chin and Ozcan, Fatma and Patel, Jignesh and Pavlo, Andrew and Popa, Raluca and Ramakrishnan, Raghu and Re, Christopher and Stonebraker, Michael and Suciu, Dan},
+  date = {2022-07-21},
+  journaltitle = {Communications of the ACM},
+  shortjournal = {Commun. ACM},
+  volume = {65},
+  number = {8},
+  pages = {72--79},
+  issn = {0001-0782},
+  doi = {10.1145/3524284},
+  url = {https://dl.acm.org/doi/10.1145/3524284},
+  urldate = {2024-01-15},
+  abstract = {Every five years, a group of the leading database researchers meet to reflect on their community's impact on the computing industry as well as examine current research challenges.},
+  file = {/home/agrueneberg/Sync/Zotero/storage/TMQ5QJFB/Abadi et al. - 2022 - The Seattle report on database research.pdf}
+}
+
+@article{aggarwalSmallFilesProblem2022,
+  title = {Small Files’ Problem in {{Hadoop}}: {{A}} Systematic Literature Review},
+  shorttitle = {Small Files’ Problem in {{Hadoop}}},
+  author = {Aggarwal, Raveena and Verma, Jyoti and Siwach, Manvi},
+  date = {2022-11-01},
+  journaltitle = {Journal of King Saud University - Computer and Information Sciences},
+  shortjournal = {Journal of King Saud University - Computer and Information Sciences},
+  volume = {34},
+  pages = {8658--8674},
+  issn = {1319-1578},
+  doi = {10.1016/j.jksuci.2021.09.007},
+  url = {https://www.sciencedirect.com/science/article/pii/S1319157821002585},
+  urldate = {2024-01-05},
+  abstract = {Apache Hadoop is an open-source software library which integrates a wide variety of software tools and utilities to facilitate the distributed batch processing of big data sets. Hadoop ecosystem comprises two major components - Hadoop Distributed File System (HDFS), which is primarily used for storage and MapReduce, which is primarily used for processing of the files. The performance of Hadoop holds back when it comes to storage and processing of small files. Small files are essentially the files that are significantly smaller in size when compared to the default block size of HDFS. This is because each small file consumes a block individually leading to excessive memory requirement, access time and processing time. Scaling the memory, allowing access latencies and processing delays beyond a limit is not an option. Henceforth, in this paper, a Systematic Literature Review has been performed to provide a comprehensive and exhaustive gestalt of the small files' problem in Hadoop. The paper defines a comprehensive taxonomy of Hadoop ecosystem and its’ existent small files problem. Further, the study also attempts to critically analyze the solutions that have been proposed to overcome this problem. These solutions have been analytically studied to identify the set of parameters that should be considered in impending while proposing solutions pertaining to this problem.},
+  issue = {10, Part A},
+  keywords = {File merging,Hadoop,Hadoop Distributed File System,MapReduce,Small files},
+  file = {/home/agrueneberg/Sync/Zotero/storage/E5G8DV4C/Aggarwal et al. - 2022 - Small files’ problem in Hadoop A systematic liter.pdf}
+}
+
+@article{agiwalNapaPoweringScalable2021,
+  title = {Napa: {{Powering}} Scalable Data Warehousing with Robust Query Performance at Google},
+  author = {Agiwal, Ankur and Lai, Kevin and Manoharan, Gokul Nath Babu and Roy, Indrajit and Sankaranarayanan, Jagan and Zhang, Hao and Zou, Tao and Chen, Min and Chen, Jim and Dai, Ming and Do, Thanh and Gao, Haoyu and Geng, Haoyan and Grover, Raman and Huang, Bo and Huang, Yanlai and Li, Adam and Liang, Jianyi and Lin, Tao and Liu, Li and Liu, Yao and Mao, Xi and Meng, Maya and Mishra, Prashant and Patel, Jay and R, Rajesh S and Raman, Vijayshankar and Roy, Sourashis and Shishodia, Mayank Singh and Sun, Tianhang and Tang, Justin and Tatemura, Junichi and Trehan, Sagar and Vadali, Ramkumar and Venkatasubramanian, Prasanna and Zhang, Joey and Zhang, Kefei and Zhang, Yupu and Zhuang, Zeleng and Graefe, Goetz and Agrawal, Divyakanth and Naughton, Jeff and Kosalge, Sujata Sunil and Hacıgümüş, Hakan},
+  date = {2021},
+  journaltitle = {Proceedings of the VLDB Endowment (PVLDB)},
+  volume = {14 (12)},
+  pages = {2986--2998},
+  file = {/home/agrueneberg/Sync/Zotero/storage/T2Q8D8E9/Agiwal et al. - 2021 - Napa Powering scalable data warehousing with robu.pdf}
+}
+
+@inproceedings{ailamakiWeavingRelationsCache2001,
+  title = {Weaving {{Relations}} for {{Cache Performance}}},
+  booktitle = {Proceedings of the 27th {{International Conference}} on {{Very Large Data Bases}}},
+  author = {Ailamaki, Anastassia and DeWitt, David J. and Hill, Mark D. and Skounakis, Marios},
+  date = {2001-09-11},
+  series = {{{VLDB}} '01},
+  pages = {169--180},
+  publisher = {{Morgan Kaufmann Publishers Inc.}},
+  location = {{San Francisco, CA, USA}},
+  isbn = {978-1-55860-804-7},
+  file = {/home/agrueneberg/Sync/Zotero/storage/697TF5SK/Ailamaki et al. - Weaving Relations for Cache Performance.pdf}
+}
+
+@online{Alluxio,
+  title = {Alluxio},
+  url = {https://www.alluxio.io/},
+  urldate = {2024-01-19}
+}
+
+@online{AmazonS3,
+  title = {Amazon {{S3}}},
+  url = {https://aws.amazon.com/s3/},
+  urldate = {2023-11-15},
+  abstract = {Amazon S3 is cloud object storage with industry-leading scalability, data availability, security, and performance. S3 is ideal for data lakes, mobile applications, backup and restore, archival, IoT devices, ML, AI, and analytics.},
+  langid = {american},
+  organization = {{Amazon S3}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/G5THSCE7/s3.html}
+}
+
+@article{AmazonSimpleStorage,
+  title = {Amazon {{Simple Storage Service}} - {{API Reference}}},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/NDUAJNBV/Amazon Simple Storage Service - API Reference.pdf}
+}
+
+@inproceedings{ananthanarayananPACManCoordinatedMemory2012,
+  title = {{{PACMan}}: {{Coordinated Memory Caching}} for {{Parallel Jobs}}},
+  shorttitle = {{{PACMan}}},
+  author = {Ananthanarayanan, Ganesh and Ghodsi, Ali and Wang, Andrew and Borthakur, Dhruba and Kandula, Srikanth and Shenker, Scott and Stoica, Ion},
+  date = {2012-04-01},
+  url = {https://www.microsoft.com/en-us/research/publication/pacman-coordinated-memory-caching-for-parallel-jobs/},
+  urldate = {2024-01-13},
+  abstract = {Data-intensive analytics on large clusters is important for modern Internet services. As machines in these clusters have large memories, in-memory caching of inputs is an effective way to speed up these analytics jobs. The key challenge, however, is that these jobs run multiple tasks in parallel and a job is sped up only when inputs […]},
+  eventtitle = {{{USENIX NSDI}}},
+  langid = {american},
+  file = {/home/agrueneberg/Sync/Zotero/storage/BN4YRN3U/Ananthanarayanan et al. - 2012 - PACMan Coordinated Memory Caching for Parallel Jo.pdf}
+}
+
+@online{ApacheArrow,
+  title = {Apache {{Arrow}}},
+  url = {https://arrow.apache.org/},
+  urldate = {2023-11-15},
+  abstract = {A cross-language development platform for in-memory analytics},
+  langid = {american},
+  organization = {{Apache Arrow}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/9F9Y5BRC/arrow.apache.org.html}
+}
+
+@software{ApacheArrowrs2024,
+  title = {Apache/Arrow-Rs},
+  date = {2024-01-20T23:24:24Z},
+  origdate = {2021-04-17T15:40:05Z},
+  url = {https://github.com/apache/arrow-rs},
+  urldate = {2024-01-22},
+  organization = {{The Apache Software Foundation}}
+}
+
+@online{ApacheAvro,
+  title = {Apache {{Avro}}},
+  url = {https://avro.apache.org/},
+  urldate = {2023-07-26},
+  langid = {english},
+  organization = {{Apache Avro}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/VNYKUWGE/avro.apache.org.html}
+}
+
+@software{ApacheAvro2024,
+  title = {Apache/Avro},
+  date = {2024-01-28T10:58:39Z},
+  origdate = {2009-05-21T02:48:37Z},
+  url = {https://github.com/apache/avro},
+  urldate = {2024-01-28},
+  organization = {{The Apache Software Foundation}},
+  keywords = {avro,bigdata,c,cplusplus,csharp,dotnet,java,perl,php,python,ruby,rust}
+}
+
+@online{ApacheCarbonData,
+  title = {Apache {{CarbonData}}},
+  url = {https://carbondata.apache.org/},
+  urldate = {2023-11-15},
+  organization = {{Apache CarbonData}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/NRXMUDHB/carbondata.apache.org.html}
+}
+
+@online{ApacheHadoop,
+  title = {Apache {{Hadoop}}},
+  url = {https://hadoop.apache.org/},
+  urldate = {2023-11-15},
+  organization = {{Apache Hadoop}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/9SZC3TWL/hadoop.apache.org.html}
+}
+
+@online{ApacheHive,
+  title = {Apache {{Hive}}},
+  url = {https://hive.apache.org/},
+  urldate = {2023-11-15},
+  organization = {{Apache Hive}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/GQVMGXK4/hive.apache.org.html}
+}
+
+@online{ApacheHiveAdminManual,
+  title = {Apache {{Hive}}: {{AdminManual Metastore Administration}}},
+  url = {https://cwiki.apache.org/confluence/display/Hive/AdminManual+Metastore+Administration},
+  urldate = {2024-01-22}
+}
+
+@online{ApacheHiveFileFormats,
+  title = {Apache {{Hive}}: {{FileFormats}}},
+  url = {https://cwiki.apache.org/confluence/display/Hive/FileFormats},
+  urldate = {2024-01-28}
+}
+
+@online{ApacheHiveStatsDev,
+  title = {Apache {{Hive}}: {{StatsDev}}},
+  url = {https://cwiki.apache.org/confluence/display/Hive/StatsDev},
+  urldate = {2024-01-18}
+}
+
+@online{ApacheHiveWiki,
+  title = {Apache {{Hive Wiki}}},
+  url = {https://cwiki.apache.org/confluence/display/Hive/Home},
+  urldate = {2024-01-17},
+  file = {/home/agrueneberg/Sync/Zotero/storage/CGX3DP44/Home.html}
+}
+
+@online{ApacheHudi,
+  title = {Apache {{Hudi}}},
+  url = {https://hudi.apache.org/},
+  urldate = {2023-07-26},
+  langid = {english},
+  organization = {{Apache Hudi}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/NUVSAYDP/hudi.apache.org.html}
+}
+
+@online{ApacheHudiData2021,
+  title = {Apache {{Hudi}} - {{The Data Lake Platform}}},
+  date = {2021-07-21T00:00:00},
+  url = {https://hudi.apache.org/blog/2021/07/21/streaming-data-lake-platform},
+  urldate = {2023-11-12},
+  abstract = {As early as 2016, we set out a bold, new vision reimagining batch data processing through a new “incremental” data processing stack - alongside the existing batch and streaming stacks.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/559ZJKMC/streaming-data-lake-platform.html}
+}
+
+@online{ApacheHudiGitHub,
+  title = {Apache/Hudi on {{GitHub}}: {{Pull Request}} \#4718 - [{{HUDI-3345}}][{{RFC-36}}] {{Hudi}} Metastore Server},
+  url = {https://github.com/apache/hudi/pull/4718},
+  urldate = {2024-01-09}
+}
+
+@online{ApacheHudiGitHuba,
+  title = {Apache/Hudi on {{GitHub}}: {{Highlighted Source Code}} of Hudi-Common/Src/Main/Java/Org/Apache/Hudi/Common/Table/{{HoodieTableVersion}}.Java},
+  url = {https://github.com/apache/hudi/blob/10bc664c67d00c0c2a08bc20bf5cb709b471168e/hudi-common/src/main/java/org/apache/hudi/common/table/HoodieTableVersion.java#L30-L43},
+  urldate = {2024-01-17},
+  langid = {english},
+  organization = {{GitHub}}
+}
+
+@online{ApacheHudiGitHubb,
+  title = {Apache/Hudi on {{GitHub}}: {{Highlighted Source Code}} of Hudi-Common/Src/Main/Java/Org/Apache/Hudi/Common/Table/{{HoodieTableConfig}}.Java},
+  url = {https://github.com/apache/hudi/blob/10bc664c67d00c0c2a08bc20bf5cb709b471168e/hudi-common/src/main/java/org/apache/hudi/common/table/HoodieTableConfig.java#L110-L114},
+  urldate = {2024-01-17},
+  abstract = {Upserts, Deletes And Incremental Processing on Big Data. - apache/hudi},
+  langid = {english},
+  organization = {{GitHub}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/FVTBUIG9/HoodieTableConfig.html}
+}
+
+@online{ApacheHudiGitHubc,
+  title = {Apache/Hudi on {{GitHub}}: {{Source Code}} of Hudi-Common/Src/Main/Java/Org/Apache/Hudi/Common/Table/{{HoodieTableConfig}}.Java},
+  url = {https://github.com/apache/hudi/blob/master/hudi-common/src/main/java/org/apache/hudi/common/table/HoodieTableConfig.java},
+  urldate = {2024-01-17}
+}
+
+@online{ApacheHudiGitHubd,
+  title = {Apache/Hudi on {{GitHub}}:  {{Source Code}} of Hudi-Common/Src/Main/Avro/{{HoodieMetadata}}.Avsc},
+  url = {https://github.com/apache/hudi/blob/0bbfc0754b051490450b9484b69e2bc708ec475b/hudi-common/src/main/avro/HoodieMetadata.avsc},
+  urldate = {2024-01-17}
+}
+
+@online{ApacheHudiGitHube,
+  title = {Apache/Hudi on {{GitHub}}: {{Issue}} \#5537 - Hudi Supports Custom Catalog Name, Spark\_catalog Is Not Mandatory},
+  url = {https://github.com/apache/hudi/issues/5537},
+  urldate = {2024-01-23}
+}
+
+@online{ApacheHudiGitHubf,
+  title = {Apache/Hudi on {{GitHub}}: {{Issue}} \#3898 - [{{SUPPORT}}] {{Hudi}} vs {{Hoodie}}},
+  url = {https://github.com/apache/hudi/issues/3898},
+  urldate = {2024-01-28}
+}
+
+@online{ApacheHudiGitHubg,
+  title = {Apache/Hudi on {{GitHub}}: {{Issue}} \#2288 - [{{SUPPORT}}]{{What}} Does Deltacommit.Requested,Deltacommit.Inflight Mean},
+  url = {https://github.com/apache/hudi/issues/2288#issuecomment-735939031},
+  urldate = {2024-01-28}
+}
+
+@online{ApacheHudiTechnical,
+  title = {Apache {{Hudi Technical Specification}}},
+  url = {https://hudi.apache.org/tech-specs/},
+  urldate = {2023-09-06},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/7WW5YFXH/tech-specs.html}
+}
+
+@online{ApacheIceberg,
+  title = {Apache {{Iceberg}}},
+  url = {https://iceberg.apache.org/},
+  urldate = {2023-07-26},
+  organization = {{Apache Iceberg}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/Y7337HSM/iceberg.apache.org.html}
+}
+
+@online{ApacheIcebergGitHub,
+  title = {Apache/Iceberg on {{GitHub}}: {{Commit}} A5eb3f6 - {{Initial}} Public Release},
+  url = {https://github.com/apache/iceberg/commit/a5eb3f6ba171ecfc517a4f09ae9654e7d8ae0291},
+  urldate = {2024-01-28}
+}
+
+@online{ApacheImpala,
+  title = {Apache {{Impala}}},
+  url = {https://impala.apache.org/},
+  urldate = {2023-11-15},
+  organization = {{Apache Impala}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/5NAK36PQ/impala.apache.org.html}
+}
+
+@online{ApacheORC,
+  title = {Apache {{ORC}}},
+  url = {https://orc.apache.org/},
+  urldate = {2023-07-26},
+  organization = {{Apache ORC}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/DFKL5LKJ/orc.apache.org.html}
+}
+
+@online{ApacheParquet,
+  title = {Apache {{Parquet}}},
+  url = {https://parquet.apache.org/},
+  urldate = {2023-07-26},
+  abstract = {The Apache Parquet Website},
+  langid = {english},
+  organization = {{Apache Parquet}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/9ZUPZIUS/parquet.apache.org.html}
+}
+
+@online{ApacheParquetformatGitHub,
+  title = {Apache/Parquet-Format on {{GitHub}}: {{Source Code}} of Src/Main/Thrift/Parquet.Thrift},
+  url = {https://github.com/apache/parquet-format/blob/master/src/main/thrift/parquet.thrift},
+  urldate = {2024-01-18}
+}
+
+@online{ApacheParquetformatGitHuba,
+  title = {Apache/Parquet-Format on {{GitHub}}:  {{BloomFilter}}.Md},
+  url = {https://github.com/apache/parquet-format/blob/master/BloomFilter.md},
+  urldate = {2024-01-19}
+}
+
+@online{ApacheParquetformatGitHubb,
+  title = {Apache/Parquet-Format on {{GitHub}}: {{CHANGES}}.Md},
+  url = {https://github.com/apache/parquet-format/blob/master/CHANGES.md},
+  urldate = {2024-01-22}
+}
+
+@online{ApacheParquetformatGitHubc,
+  title = {Apache/Parquet-Format on {{GitHub}}: {{PageIndex}}.Md},
+  url = {https://github.com/apache/parquet-format/blob/master/PageIndex.md},
+  urldate = {2024-01-22}
+}
+
+@online{ApacheParquetformatGitHubd,
+  title = {Apache/Parquet-Format on {{GitHub}}: {{Compression}}.Md},
+  url = {https://github.com/apache/parquet-format/blob/master/Compression.md},
+  urldate = {2024-01-22}
+}
+
+@online{ApacheParquetformatGitHube,
+  title = {Apache/Parquet-Format on {{GitHub}}: {{Encodings}}.Md},
+  url = {https://github.com/apache/parquet-format/blob/master/Encodings.md},
+  urldate = {2024-01-22}
+}
+
+@software{ApacheParquetmr2024,
+  title = {Apache/Parquet-Mr},
+  date = {2024-01-21T20:40:32Z},
+  origdate = {2014-06-10T07:00:07Z},
+  url = {https://github.com/apache/parquet-mr},
+  urldate = {2024-01-22},
+  organization = {{The Apache Software Foundation}},
+  keywords = {big-data,java,parquet}
+}
+
+@online{ApacheSoftwareFoundation,
+  title = {The {{Apache Software Foundation Announces Apache}}™ {{Parquet}}™ as a {{Top-Level Project}}},
+  url = {https://news.apache.org/foundation/entry/the_apache_software_foundation_announces75},
+  urldate = {2024-01-22},
+  organization = {{The Apache Software Foundation Blog}}
+}
+
+@online{ApacheSpark,
+  title = {Apache {{Spark}}},
+  url = {https://spark.apache.org/},
+  urldate = {2023-11-15},
+  organization = {{Apache Spark}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/GNJQPTTU/spark.apache.org.html}
+}
+
+@software{ApacheSpark2024,
+  title = {Apache/Spark},
+  date = {2024-01-23T10:00:46Z},
+  origdate = {2014-02-25T08:00:08Z},
+  url = {https://github.com/apache/spark},
+  urldate = {2024-01-23},
+  organization = {{The Apache Software Foundation}},
+  keywords = {big-data,java,jdbc,python,r,scala,spark,sql}
+}
+
+@online{ApacheSparkGitHub,
+  title = {Apache/Spark on {{GitHub}}: {{Highlighted Source Code}} of Sql/Api/Src/Main/Antlr4/Org/Apache/Spark/Sql/Catalyst/Parser/{{SqlBaseLexer}}.G4},
+  url = {https://github.com/apache/spark/blob/ea8b1392d84757cdab03e40c2c3efea1d8ef3c82/sql/api/src/main/antlr4/org/apache/spark/sql/catalyst/parser/SqlBaseLexer.g4#L47-L61},
+  urldate = {2024-01-09},
+  langid = {english},
+  organization = {{GitHub}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/UYNY6S4S/SqlBaseLexer.html}
+}
+
+@online{ApacheSparkGitHuba,
+  title = {Apache/Spark on {{GitHub}}: {{Highlighted Source Code}} Ofcore/Src/Main/Scala/Org/Apache/Spark/Rdd/{{RDD}}.Scala},
+  url = {https://github.com/apache/spark/blob/ae9106370a9f3002979077662149ba9122d86cef/core/src/main/scala/org/apache/spark/rdd/RDD.scala#L467-L478},
+  urldate = {2024-01-09},
+  langid = {english},
+  organization = {{GitHub}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/ZBXWEQAU/RDD.html}
+}
+
+@online{ApacheThrift,
+  title = {Apache {{Thrift}}},
+  url = {https://thrift.apache.org/},
+  urldate = {2023-11-15},
+  organization = {{Apache Thrift}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/U564UGCT/thrift.apache.org.html}
+}
+
+@article{armbrustDeltaLakeHighperformance2020,
+  title = {Delta Lake: High-Performance {{ACID}} Table Storage over Cloud Object Stores},
+  shorttitle = {Delta Lake},
+  author = {Armbrust, Michael and Das, Tathagata and Sun, Liwen and Yavuz, Burak and Zhu, Shixiong and Murthy, Mukul and Torres, Joseph and family=Hovell, given=Herman, prefix=van, useprefix=true and Ionescu, Adrian and Łuszczak, Alicja and Świtakowski, Michał and Szafrański, Michał and Li, Xiao and Ueshin, Takuya and Mokhtar, Mostafa and Boncz, Peter and Ghodsi, Ali and Paranjpye, Sameer and Senster, Pieter and Xin, Reynold and Zaharia, Matei},
+  date = {2020-08-01},
+  journaltitle = {Proceedings of the VLDB Endowment},
+  shortjournal = {Proc. VLDB Endow.},
+  volume = {13},
+  number = {12},
+  pages = {3411--3424},
+  issn = {2150-8097},
+  doi = {10.14778/3415478.3415560},
+  url = {https://doi.org/10.14778/3415478.3415560},
+  urldate = {2023-07-29},
+  abstract = {Cloud object stores such as Amazon S3 are some of the largest and most cost-effective storage systems on the planet, making them an attractive target to store large data warehouses and data lakes. Unfortunately, their implementation as key-value stores makes it difficult to achieve ACID transactions and high performance: metadata operations such as listing objects are expensive, and consistency guarantees are limited. In this paper, we present Delta Lake, an open source ACID table storage layer over cloud object stores initially developed at Databricks. Delta Lake uses a transaction log that is compacted into Apache Parquet format to provide ACID properties, time travel, and significantly faster metadata operations for large tabular datasets (e.g., the ability to quickly search billions of table partitions for those relevant to a query). It also leverages this design to provide high-level features such as automatic data layout optimization, upserts, caching, and audit logs. Delta Lake tables can be accessed from Apache Spark, Hive, Presto, Redshift and other systems. Delta Lake is deployed at thousands of Databricks customers that process exabytes of data per day, with the largest instances managing exabyte-scale datasets and billions of objects.},
+  file = {/home/agrueneberg/Sync/Zotero/storage/DK6HPNGV/Armbrust et al. - 2020 - Delta lake high-performance ACID table storage ov.pdf}
+}
+
+@inproceedings{armbrustLakehouseNewGeneration2021,
+  title = {Lakehouse: A New Generation of Open Platforms That Unify Data Warehousing and Advanced Analytics},
+  booktitle = {Proceedings of {{CIDR}}},
+  author = {Armbrust, Michael and Ghodsi, Ali and Xin, Reynold and Zaharia, Matei},
+  date = {2021},
+  volume = {8},
+  file = {/home/agrueneberg/Sync/Zotero/storage/U796GI2V/Armbrust et al. - 2021 - Lakehouse A New Generation of Open Platforms that.pdf}
+}
+
+@inproceedings{armbrustSparkSQLRelational2015,
+  title = {Spark {{SQL}}: {{Relational Data Processing}} in {{Spark}}},
+  shorttitle = {Spark {{SQL}}},
+  booktitle = {Proceedings of the 2015 {{ACM SIGMOD International Conference}} on {{Management}} of {{Data}}},
+  author = {Armbrust, Michael and Xin, Reynold S. and Lian, Cheng and Huai, Yin and Liu, Davies and Bradley, Joseph K. and Meng, Xiangrui and Kaftan, Tomer and Franklin, Michael J. and Ghodsi, Ali and Zaharia, Matei},
+  date = {2015-05-27},
+  series = {{{SIGMOD}} '15},
+  pages = {1383--1394},
+  publisher = {{Association for Computing Machinery}},
+  location = {{New York, NY, USA}},
+  doi = {10.1145/2723372.2742797},
+  url = {https://dl.acm.org/doi/10.1145/2723372.2742797},
+  urldate = {2023-08-30},
+  abstract = {Spark SQL is a new module in Apache Spark that integrates relational processing with Spark's functional programming API. Built on our experience with Shark, Spark SQL lets Spark programmers leverage the benefits of relational processing (e.g. declarative queries and optimized storage), and lets SQL users call complex analytics libraries in Spark (e.g. machine learning). Compared to previous systems, Spark SQL makes two main additions. First, it offers much tighter integration between relational and procedural processing, through a declarative DataFrame API that integrates with procedural Spark code. Second, it includes a highly extensible optimizer, Catalyst, built using features of the Scala programming language, that makes it easy to add composable rules, control code generation, and define extension points. Using Catalyst, we have built a variety of features (e.g. schema inference for JSON, machine learning types, and query federation to external databases) tailored for the complex needs of modern data analysis. We see Spark SQL as an evolution of both SQL-on-Spark and of Spark itself, offering richer APIs and optimizations while keeping the benefits of the Spark programming model.},
+  isbn = {978-1-4503-2758-9},
+  keywords = {data warehouse,databases,hadoop,machine learning,spark},
+  file = {/home/agrueneberg/Sync/Zotero/storage/5WG2WXAU/Armbrust et al. - 2015 - Spark SQL Relational Data Processing in Spark.pdf}
+}
+
+@online{ArrowColumnarFormat,
+  title = {Arrow {{Columnar Format}} — {{Apache Arrow}} V14.0.2},
+  url = {https://arrow.apache.org/docs/format/Columnar.html},
+  urldate = {2023-12-22}
+}
+
+@online{AWSGlue,
+  title = {{{AWS Glue}}},
+  url = {https://aws.amazon.com/glue/},
+  urldate = {2024-01-22}
+}
+
+@online{AWSNewsBlog2006,
+  title = {{{AWS News Blog}}: {{Amazon S3}}},
+  date = {2006-03-14T13:48:11-08:00},
+  url = {https://aws.amazon.com/blogs/aws/amazon_s3/},
+  urldate = {2024-01-13},
+  langid = {american},
+  file = {/home/agrueneberg/Sync/Zotero/storage/FKW8V7J5/amazon_s3.html}
+}
+
+@online{AWSNewsBlog2020,
+  title = {{{AWS News Blog}}: {{Amazon S3 Update}} – {{Strong Read-After-Write Consistency}}},
+  date = {2020-12-01T16:02:03-08:00},
+  url = {https://aws.amazon.com/blogs/aws/amazon-s3-update-strong-read-after-write-consistency/},
+  urldate = {2024-01-13},
+  langid = {american}
+}
+
+@online{AzureBlobStorage,
+  title = {Azure {{Blob Storage}}},
+  url = {https://azure.microsoft.com/en-us/products/storage/blobs},
+  urldate = {2023-11-15},
+  abstract = {Azure Blob storage provides scalable, cost-efficient object storage in the cloud. Store and access unstructured data for your most demanding workloads.},
+  langid = {american},
+  organization = {{Azure Blob Storage}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/9LB96HIV/blobs.html}
+}
+
+@manual{barrettDataTableExtension2023,
+  type = {manual},
+  title = {Data.Table: {{Extension}} of `data.Frame`},
+  author = {Barrett, Tyson and Dowle, Matt and Srinivasan, Arun},
+  date = {2023},
+  url = {https://r-datatable.com}
+}
+
+@inproceedings{begoliLakehouseArchitectureManagement2021,
+  title = {A {{Lakehouse Architecture}} for the {{Management}} and {{Analysis}} of {{Heterogeneous Data}} for {{Biomedical Research}} and {{Mega-biobanks}}},
+  booktitle = {2021 {{IEEE International Conference}} on {{Big Data}} ({{Big Data}})},
+  author = {Begoli, Edmon and Goethert, Ian and Knight, Kathryn},
+  date = {2021-12},
+  pages = {4643--4651},
+  doi = {10.1109/BigData52589.2021.9671534},
+  url = {https://ieeexplore.ieee.org/abstract/document/9671534?casa_token=OSD45K93fJYAAAAA:RpG54o6Wv9eTn8J2GTnvcSVX-SgpUAX1BSJK3dyEzGX2j7xUDVoIOMvXJP6dUBH5ZgtcVB7E},
+  urldate = {2024-01-14},
+  abstract = {Data Lakehouse is a new paradigm in data architectures that embodies and integrates already established concepts for the systematic management of disparate, large-scale data – a data lake for heterogeneous data management, use of open standards for high-performance querying, and systematic maintenance of the data "freshness". In addition to being a new concept, the data lakehouse is also still a conceptual construct. Many projects that use the lakehouse require maturing, empirical studies, and specific implementations. In this paper, we present our implementation of the data lakehouse concept in a biomedical research and health data analytics domain, and we discuss the implementation of some unique and novel features such as support for specialized access controls in support of HIPAA regulation and IRB protocols, and support for the FAIR standard.1},
+  eventtitle = {2021 {{IEEE International Conference}} on {{Big Data}} ({{Big Data}})},
+  file = {/home/agrueneberg/Sync/Zotero/storage/FGMGJQKH/Begoli et al. - 2021 - A Lakehouse Architecture for the Management and An.pdf}
+}
+
+@inproceedings{behmPhotonFastQuery2022,
+  title = {Photon: {{A Fast Query Engine}} for {{Lakehouse Systems}}},
+  shorttitle = {Photon},
+  booktitle = {Proceedings of the 2022 {{International Conference}} on {{Management}} of {{Data}}},
+  author = {Behm, Alexander and Palkar, Shoumik and Agarwal, Utkarsh and Armstrong, Timothy and Cashman, David and Dave, Ankur and Greenstein, Todd and Hovsepian, Shant and Johnson, Ryan and Sai Krishnan, Arvind and Leventis, Paul and Luszczak, Ala and Menon, Prashanth and Mokhtar, Mostafa and Pang, Gene and Paranjpye, Sameer and Rahn, Greg and Samwel, Bart and Van Bussel, Tom and Van Hovell, Herman and Xue, Maryann and Xin, Reynold and Zaharia, Matei},
+  date = {2022-06-10},
+  pages = {2326--2339},
+  publisher = {{ACM}},
+  location = {{Philadelphia PA USA}},
+  doi = {10.1145/3514221.3526054},
+  url = {https://dl.acm.org/doi/10.1145/3514221.3526054},
+  urldate = {2023-07-29},
+  abstract = {Many organizations are shifting to a data management paradigm called the “Lakehouse,” which implements the functionality of structured data warehouses on top of unstructured data lakes. This presents new challenges for query execution engines. The execution engine needs to provide good performance on the raw uncurated datasets that are ubiquitous in data lakes, and excellent performance on structured data stored in popular columnar file formats like Apache Parquet. Toward these goals, we present Photon, a vectorized query engine for Lakehouse environments that we developed at Databricks. Photon can outperform existing cloud data warehouses in SQL workloads, but implements a more general execution framework that enables efficient processing of raw data and also enables Photon to support the Apache Spark API. We discuss the design choices we made in Photon (e.g., vectorization vs. code generation) and describe its integration with our existing SQL and Apache Spark runtimes, its task model, and its memory manager. Photon has accelerated some customer workloads by over 10× and has recently allowed Databricks to set a new audited performance record for the official 100TB TPC-DS benchmark.},
+  eventtitle = {{{SIGMOD}}/{{PODS}} '22: {{International Conference}} on {{Management}} of {{Data}}},
+  isbn = {978-1-4503-9249-5},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/3VJY6ECA/Behm et al. - 2022 - Photon A Fast Query Engine for Lakehouse Systems.pdf}
+}
+
+@article{berensonCritiqueANSISQL1995,
+  title = {A {{Critique}} of {{ANSI SQL Isolation Levels}}},
+  author = {Berenson, Hal and Bernstein, Phil and Gray, Jim and Melton, Jim and O’Neil, Elizabeth and O'Neil, Patrick},
+  date = {1995},
+  abstract = {ANSI SQL-92 [MS, ANSI] defines Isolation distinction is not crucial for a general understanding. Levels in terms of phenomena: Dirty Reads, Non-Re- The ANSI isolation levels are related to the behavior of peatable Reads, and Phantoms. This paper shows that lock schedulers. Some lock schedulers allow transactions these phenomena and the ANSI SQL definitions fail to to vary the scope and duration of their lock requests, thus characterize several popular isolation levels, including the departing from pure two-phase locking. This idea was instandard locking implementations of the levels. troduced by [GLPT], which defined Degrees of Consistency Investigating the ambiguities of the phenomena leads to in three ways: locking, data-flow graphs, and anomalies. clearer definitions; in addition new phenomena that better Defining isolation levels by phenomena (anomalies) was characterize isolation types are introduced. An important intended to allow non-lock-based implementations of the multiversion isolation type, Snapshot Isolation, is defined.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/3E9KIK5M/Berenson et al. - 1995 - A Critique of ANSI SQL Isolation Levels.pdf}
+}
+
+@inproceedings{bonczTPCHAnalyzedHidden2014,
+  title = {{{TPC-H Analyzed}}: {{Hidden Messages}} and {{Lessons Learned}} from an {{Influential Benchmark}}},
+  shorttitle = {{{TPC-H Analyzed}}},
+  booktitle = {Performance {{Characterization}} and {{Benchmarking}}},
+  author = {Boncz, Peter and Neumann, Thomas and Erling, Orri},
+  editor = {Nambiar, Raghunath and Poess, Meikel},
+  date = {2014},
+  series = {Lecture {{Notes}} in {{Computer Science}}},
+  pages = {61--76},
+  publisher = {{Springer International Publishing}},
+  location = {{Cham}},
+  doi = {10.1007/978-3-319-04936-6_5},
+  abstract = {The TPC-D benchmark was developed almost 20 years ago, and even though its current existence as TPC-H could be considered superseded by TPC-DS, one can still learn from it. We focus on the technical level, summarizing the challenges posed by the TPC-H workload as we now understand them, which we call “choke points”. We identify 28 different such choke points, grouped into six categories: Aggregation Performance, Join Performance, Data Access Locality, Expression Calculation, Correlated Subqueries and Parallel Execution. On the meta-level, we make the point that the rich set of choke-points found in TPC-H sets an example on how to design future DBMS benchmarks.},
+  isbn = {978-3-319-04936-6},
+  langid = {english},
+  keywords = {Expression Calculation,Query Execution,Query Plan,String Comparison,Workload Management},
+  file = {/home/agrueneberg/Sync/Zotero/storage/WNNPU9C4/Boncz et al. - 2014 - TPC-H Analyzed Hidden Messages and Lessons Learne.pdf}
+}
+
+@online{BriefHistoryDelta,
+  title = {Brief {{History}} of {{Delta Lake}} and {{Roadmap}} 2022},
+  url = {https://www.linkedin.com/pulse/brief-history-delta-lake-roadmap-2022-kamal-pathak},
+  urldate = {2023-11-12},
+  abstract = {"Join Michael Armbrust", head of Delta Lake engineering team, and his team built upon Apache Spark to bring ACID transactions and other data reliability technologies from the data warehouse world to cloud data lakes. Databricks Announced release of “Databricks Delta” in Spark Summit in 2017.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/HGB54RKD/brief-history-delta-lake-roadmap-2022-kamal-pathak.html}
+}
+
+@inproceedings{camacho-rodriguezApacheHiveMapReduce2019,
+  title = {Apache {{Hive}}: {{From MapReduce}} to {{Enterprise-grade Big Data Warehousing}}},
+  shorttitle = {Apache {{Hive}}},
+  booktitle = {Proceedings of the 2019 {{International Conference}} on {{Management}} of {{Data}}},
+  author = {Camacho-Rodríguez, Jesús and Chauhan, Ashutosh and Gates, Alan and Koifman, Eugene and O'Malley, Owen and Garg, Vineet and Haindrich, Zoltan and Shelukhin, Sergey and Jayachandran, Prasanth and Seth, Siddharth and Jaiswal, Deepak and Bouguerra, Slim and Bangarwa, Nishant and Hariappan, Sankar and Agarwal, Anishek and Dere, Jason and Dai, Daniel and Nair, Thejas and Dembla, Nita and Vijayaraghavan, Gopal and Hagleitner, Günther},
+  date = {2019-06-25},
+  series = {{{SIGMOD}} '19},
+  pages = {1773--1786},
+  publisher = {{Association for Computing Machinery}},
+  location = {{New York, NY, USA}},
+  doi = {10.1145/3299869.3314045},
+  url = {https://doi.org/10.1145/3299869.3314045},
+  urldate = {2023-11-15},
+  abstract = {Apache Hive is an open-source relational database system for analytic big-data workloads. In this paper we describe the key innovations on the journey from batch tool to fully fledged enterprise data warehousing system. We present a hybrid architecture that combines traditional MPP techniques with more recent big data and cloud concepts to achieve the scale and performance required by today's analytic applications. We explore the system by detailing enhancements along four main axis: Transactions, optimizer, runtime, and federation. We then provide experimental results to demonstrate the performance of the system for typical workloads and conclude with a look at the community roadmap.},
+  isbn = {978-1-4503-5643-5},
+  keywords = {data warehouses,databases,hadoop,hive},
+  file = {/home/agrueneberg/Sync/Zotero/storage/DPQ2JSHX/Camacho-Rodríguez et al. - 2019 - Apache Hive From MapReduce to Enterprise-grade Bi.pdf}
+}
+
+@online{CephIo,
+  title = {Ceph.Io},
+  url = {https://ceph.io/en/},
+  urldate = {2023-11-15},
+  abstract = {Ceph is an open source distributed storage system designed to evolve with data.},
+  langid = {english},
+  organization = {{Ceph.io}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/M7UVGRVT/en.html}
+}
+
+@online{chandarUberCaseIncremental2016,
+  title = {Uber's Case for Incremental Processing on {{Hadoop}}},
+  author = {Chandar, Vinoth},
+  date = {2016-08-04T11:15:00-04:00},
+  url = {https://www.oreilly.com/content/ubers-case-for-incremental-processing-on-hadoop/},
+  urldate = {2023-11-12},
+  abstract = {Near-real-time processing yields increased efficiency and an opportunity for unified architecture.},
+  langid = {american},
+  organization = {{O’Reilly Media}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/L5LCU7U4/ubers-case-for-incremental-processing-on-hadoop.html}
+}
+
+@article{chattopadhyaySharedFoundationsModernizing2023,
+  title = {Shared {{Foundations}}: {{Modernizing Meta}}’s {{Data Lakehouse}}},
+  author = {Chattopadhyay, Biswapesh and Pedreira, Pedro and Agarwal, Sameer and Vakharia, Suketu and Li, Peng and Liu, Weiran and Narayanan, Sundaram},
+  date = {2023},
+  abstract = {Data processing systems have evolved significantly over the last decade, driven by large trends in hardware and software, the exponential growth of data, and new and changing use cases. At Meta (and elsewhere), the various data systems composing the data lakehouse had historically evolved organically and independently, leading to data stack fragmentation, and resulting in work duplication, subpar system performance, and inconsistent user experience. This paper describes how we transformed the legacy data lakehouse stack at Meta to adapt to the new realities through a large cross-organizational effort called Shared Foundations. This program promotes a compositional approach based on the principles of reusable components, deduplicated systems, and common and consistent APIs. The Shared Foundations effort has resulted in a more modern data architecture at Meta – one that offers better performance, richer features, higher engineering velocity, and a more consistent user experience, setting up the data lakehouse stack at Meta for faster innovation in the future.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/R3KQGYG5/Chattopadhyay et al. - 2023 - Shared Foundations Modernizing Meta’s Data Lakeho.pdf}
+}
+
+@article{chaudhuriOverviewDataWarehousing1997,
+  title = {An Overview of Data Warehousing and {{OLAP}} Technology},
+  author = {Chaudhuri, Surajit and Dayal, Umeshwar},
+  date = {1997-03-01},
+  journaltitle = {ACM SIGMOD Record},
+  shortjournal = {SIGMOD Rec.},
+  volume = {26},
+  number = {1},
+  pages = {65--74},
+  issn = {0163-5808},
+  doi = {10.1145/248603.248616},
+  url = {https://dl.acm.org/doi/10.1145/248603.248616},
+  urldate = {2024-01-26},
+  abstract = {Data warehousing and on-line analytical processing (OLAP) are essential elements of decision support, which has increasingly become a focus of the database industry. Many commercial products and services are now available, and all of the principal database management system vendors now have offerings in these areas. Decision support places some rather different requirements on database technology compared to traditional on-line transaction processing applications. This paper provides an overview of data warehousing and OLAP technologies, with an emphasis on their new requirements. We describe back end tools for extracting, cleaning and loading data into a data warehouse; multidimensional data models typical of OLAP; front end client tools for querying and data analysis; server extensions for efficient query processing; and tools for metadata management and for managing the warehouse. In addition to surveying the state of the art, this paper also identifies some promising research issues, some of which are related to problems that the database research community has worked on for years, but others are only just beginning to be addressed. This overview is based on a tutorial that the authors presented at the VLDB Conference, 1996.},
+  file = {/home/agrueneberg/Sync/Zotero/storage/K8VFNIDZ/Chaudhuri and Dayal - 1997 - An overview of data warehousing and OLAP technolog.pdf}
+}
+
+@article{crottyAreYouSure2022,
+  title = {Are {{You Sure You Want}} to {{Use MMAP}} in {{Your Database Management System}}?},
+  author = {Crotty, Andrew and Leis, Viktor and Pavlo, Andrew},
+  date = {2022},
+  abstract = {Memory-mapped (mmap) file I/O is an OS-provided feature that maps the contents of a file on secondary storage into a program’s address space. The program then accesses pages via pointers as if the file resided entirely in memory. The OS transparently loads pages only when the program references them and automatically evicts pages if memory fills up.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/XFUXDS2K/Crotty et al. - 2022 - Are You Sure You Want to Use MMAP in Your Database.pdf}
+}
+
+@inproceedings{dagevilleSnowflakeElasticData2016,
+  title = {The {{Snowflake Elastic Data Warehouse}}},
+  booktitle = {Proceedings of the 2016 {{International Conference}} on {{Management}} of {{Data}}},
+  author = {Dageville, Benoit and Cruanes, Thierry and Zukowski, Marcin and Antonov, Vadim and Avanes, Artin and Bock, Jon and Claybaugh, Jonathan and Engovatov, Daniel and Hentschel, Martin and Huang, Jiansheng and Lee, Allison W. and Motivala, Ashish and Munir, Abdul Q. and Pelley, Steven and Povinec, Peter and Rahn, Greg and Triantafyllis, Spyridon and Unterbrunner, Philipp},
+  date = {2016-06-14},
+  pages = {215--226},
+  publisher = {{ACM}},
+  location = {{San Francisco California USA}},
+  doi = {10.1145/2882903.2903741},
+  url = {https://dl.acm.org/doi/10.1145/2882903.2903741},
+  urldate = {2023-12-30},
+  eventtitle = {{{SIGMOD}}/{{PODS}}'16: {{International Conference}} on {{Management}} of {{Data}}},
+  isbn = {978-1-4503-3531-7},
+  langid = {english},
+  keywords = {data warehousing,database as a service,multi-cluster shared data architecture},
+  file = {/home/agrueneberg/Sync/Zotero/storage/YHR9EH5W/Dageville et al. - 2016 - The Snowflake Elastic Data Warehouse.pdf}
+}
+
+@online{Databricks,
+  title = {Databricks},
+  url = {https://www.databricks.com/product/data-lakehouse},
+  urldate = {2024-02-02}
+}
+
+@online{DatabricksCBO,
+  title = {Databricks {{Documentation}}: {{Cost-based}} Optimizer},
+  url = {https://docs.databricks.com/en/optimizations/cbo.html},
+  urldate = {2024-01-28}
+}
+
+@online{DatabricksUnityCatalog,
+  title = {Databricks {{Unity Catalog}}},
+  url = {https://www.databricks.com/product/unity-catalog},
+  urldate = {2024-01-22}
+}
+
+@inproceedings{deanMapReduceSimplifiedData2004,
+  title = {{{MapReduce}}: {{Simplified Data Processing}} on {{Large Clusters}}},
+  shorttitle = {{{MapReduce}}},
+  booktitle = {{{OSDI}}'04: {{Sixth Symposium}} on {{Operating System Design}} and {{Implementation}}},
+  author = {Dean, Jeffrey and Ghemawat, Sanjay},
+  date = {2004},
+  pages = {137--150},
+  location = {{San Francisco, CA}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/Q8ADWWBR/Dean and Ghemawat - 2004 - MapReduce Simplified Data Processing on Large Clu.pdf}
+}
+
+@article{DecompositionStorageModel,
+  title = {A Decomposition Storage Model},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/TPJ6CD33/A decomposition storage model.pdf}
+}
+
+@online{DeltaioDeltaGitHub,
+  title = {Delta-Io/Delta on {{GitHub}}: {{Highlighted Source Code}} of Spark/Src/Main/Scala/Org/Apache/Spark/Sql/Delta/{{DeltaConfig}}.Scala},
+  url = {https://github.com/delta-io/delta/blob/ebd0e6f0cb4933e0800c7f6cc37897ac34030f3a/spark/src/main/scala/org/apache/spark/sql/delta/DeltaConfig.scala#L383-L389},
+  urldate = {2024-01-09},
+  langid = {english},
+  organization = {{GitHub}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/YTGPX4KT/DeltaConfig.html}
+}
+
+@online{DeltaioDeltaGitHuba,
+  title = {Delta-Io/Delta on {{GitHub}}: {{Issue}} \#1729 - [{{Feature Request}}] Documentation of {{Delta}} Configs / Table Properties Missing (e.g. `{{checkpointInterval}}`, `{{enableDeletionVectors}}`, `{{enableExpiredLogCleanup}}`)},
+  url = {https://github.com/delta-io/delta/issues/1729},
+  urldate = {2024-01-09},
+  langid = {english},
+  organization = {{GitHub}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/UEXYHGIV/1729.html}
+}
+
+@online{DeltaioDeltaGitHubb,
+  title = {Delta-Io/Delta on {{GitHub}}: {{Comment}} on {{Issue}} \#244 - {{How}} to Write Checkpoint Manully ?},
+  url = {https://github.com/delta-io/delta/issues/244#issuecomment-552587654},
+  urldate = {2024-01-09},
+  langid = {english},
+  organization = {{GitHub}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/BQVF8Z9E/244.html}
+}
+
+@online{DeltaioDeltaGitHubd,
+  title = {Delta-Io/Delta on {{GitHub}}: Delta/Kernel},
+  url = {https://github.com/delta-io/delta/tree/bd59026fcc3260f4efa0f2fbbec14efd5cd8b145/kernel},
+  urldate = {2024-01-17}
+}
+
+@online{DeltaioDeltaGitHube,
+  title = {Delta-Io/Delta on {{GitHub}}: {{Issue}} \#87 - {{Storage}} Format for {{Delta}}},
+  url = {https://github.com/delta-io/delta/issues/87},
+  urldate = {2024-01-17}
+}
+
+@online{DeltaioDeltaGitHubf,
+  title = {Delta-Io/Delta on {{GitHub}}: {{Pull Request}} \#1017 - [\#781] {{Add}} Support for {{Spark DataFrameWriter maxRecordsPerFile}} Option},
+  url = {https://github.com/delta-io/delta/pull/1017},
+  urldate = {2024-01-18}
+}
+
+@online{DeltaLake,
+  title = {Delta {{Lake}}},
+  url = {https://delta.io/},
+  urldate = {2023-07-26},
+  langid = {english},
+  organization = {{Delta Lake}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/HYMPATTK/delta.io.html}
+}
+
+@online{DeltaLakeDataRetention,
+  title = {Delta {{Lake Documentation}}: {{Data}} Retention},
+  url = {https://docs.delta.io/2.4.0/delta-batch.html#data-retention},
+  urldate = {2024-01-28}
+}
+
+@online{DeltaLakeDocumentation,
+  title = {Delta {{Lake Documentation}}: {{Best}} Practices},
+  url = {https://docs.delta.io/2.4.0/best-practices.html},
+  urldate = {2024-01-19}
+}
+
+@online{DeltaLakeDocumentationa,
+  title = {Delta {{Lake Documentation}}: {{Compatibility}} with {{Spark}}},
+  url = {https://docs.delta.io/3.0.0/releases.html#compatibility-with-apache-spark},
+  urldate = {2024-01-28}
+}
+
+@online{DeltaLakeDocumentationb,
+  title = {Delta {{Lake Documentation}}: {{Remove}} Files No Longer Referenced by a {{Delta}} Table},
+  url = {https://docs.delta.io/2.4.0/delta-utility.html#remove-files-no-longer-referenced-by-a-delta-table},
+  urldate = {2024-01-28}
+}
+
+@online{DeltaLakeDocumentationc,
+  title = {Delta {{Lake Documentation}}: {{Universal Format}} ({{UniForm}})},
+  url = {https://docs.delta.io/latest/delta-uniform.html},
+  urldate = {2024-01-31}
+}
+
+@online{DeltaLakeOSS2021,
+  title = {Delta {{Lake OSS Roadmap}} and {{Review}}},
+  date = {2021-12-01},
+  url = {https://www.databricks.com/blog/2021/12/01/the-foundation-of-your-lakehouse-starts-with-delta-lake.html},
+  urldate = {2023-11-12},
+  abstract = {Learn more about how Delta Lake 1.0 supports Apache Spark 3.1 and enables a new set of features, including Generated Columns, Cloud Independence, Multi-cluster Transactions, and more. Also, get a preview of the Delta Lake 2021 2H Roadmap and what you can expect to see by the end of the year.},
+  langid = {american},
+  organization = {{Databricks}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/HRXXLNKF/the-foundation-of-your-lakehouse-starts-with-delta-lake.html}
+}
+
+@online{DeltaLakeRelease240,
+  title = {Delta {{Lake Release}} 2.4.0},
+  url = {https://github.com/delta-io/delta/releases/tag/v2.4.0},
+  urldate = {2024-01-28}
+}
+
+@online{DeltaLakeRelease300,
+  title = {Delta {{Lake Release}} 3.0.0},
+  url = {https://github.com/delta-io/delta/releases/tag/v3.0.0},
+  urldate = {2024-01-17},
+  langid = {english}
+}
+
+@online{DeltaTransactionLog,
+  title = {Delta {{Transaction Log Protocol}}},
+  url = {https://github.com/delta-io/delta/blob/ad650ac51d00c0b06caec0663e50736e4cf4af30/PROTOCOL.md},
+  urldate = {2023-09-06}
+}
+
+@online{DeveloperIntroductionApache2023,
+  title = {A {{Developer}}’s {{Introduction}} to {{Apache Iceberg}} Using {{MinIO}}},
+  date = {2023-08-24T19:30:52},
+  url = {https://blog.min.io/a-developers-introduction-to-apache-iceberg-using-minio/},
+  urldate = {2023-09-22},
+  abstract = {Introduction Open Table Formats (OTFs) are a phenomenon in the data analytics world that has been gaining momentum recently. The promise of OTFs is as a solution that leverages distributed computing and distributed object stores to provide capabilities that exceed what is possible with a Data Warehouse. ~The open aspect},
+  langid = {english},
+  organization = {{MinIO Blog}}
+}
+
+@article{difallahOLTPBenchExtensibleTestbed2013,
+  title = {{{OLTP-Bench}}: An Extensible Testbed for Benchmarking Relational Databases},
+  shorttitle = {{{OLTP-Bench}}},
+  author = {Difallah, Djellel Eddine and Pavlo, Andrew and Curino, Carlo and Cudre-Mauroux, Philippe},
+  date = {2013-12},
+  journaltitle = {Proceedings of the VLDB Endowment},
+  shortjournal = {Proc. VLDB Endow.},
+  volume = {7},
+  number = {4},
+  pages = {277--288},
+  issn = {2150-8097},
+  doi = {10.14778/2732240.2732246},
+  url = {https://dl.acm.org/doi/10.14778/2732240.2732246},
+  urldate = {2023-09-18},
+  abstract = {Benchmarking is an essential aspect of any database management system (DBMS) effort. Despite several recent advancements, such as pre-configured cloud database images and database-as-a-service (DBaaS) offerings, the deployment of a comprehensive testing platform with a diverse set of datasets and workloads is still far from being trivial. In many cases, researchers and developers are limited to a small number of workloads to evaluate the performance characteristics of their work. This is due to the lack of a universal benchmarking infrastructure, and to the difficulty of gaining access to real data and workloads. This results in lots of unnecessary engineering efforts and makes the performance evaluation results difficult to compare. To remedy these problems, we present OLTP-Bench, an extensible “batteries included” DBMS benchmarking testbed. The key contributions of OLTP-Bench are its ease of use and extensibility, support for tight control of transaction mixtures, request rates, and access distributions over time, as well as the ability to support all major DBMSs and DBaaS platforms. Moreover, it is bundled with fifteen workloads that all differ in complexity and system demands, including four synthetic workloads, eight workloads from popular benchmarks, and three workloads that are derived from real-world applications. We demonstrate through a comprehensive set of experiments conducted on popular DBMS and DBaaS offerings the different features provided by OLTP-Bench and the effectiveness of our testbed in characterizing the performance of database services.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/MEKJQQMY/Difallah et al. - 2013 - OLTP-Bench an extensible testbed for benchmarking.pdf}
+}
+
+@online{DisruptiveNatureData2023,
+  title = {The {{Disruptive Nature}} of {{Data Lakehouses}}},
+  date = {2023-09-12T20:00:52},
+  url = {https://blog.min.io/the-disruptive-nature-of-data-lakehouses/},
+  urldate = {2023-09-22},
+  abstract = {Introduction In 1997, Clayton Christensen, in his book The Innovator’s Dilemma, identified a pattern of innovation that tracked the capabilities, cost, and adoption by market segment between an incumbent and a new entrant. He labeled this pattern “Disruptive Innovation.” Not every successful product is disruptive - even if it},
+  langid = {english},
+  organization = {{MinIO Blog}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/82E87HVT/the-disruptive-nature-of-data-lakehouses.html}
+}
+
+@online{Dremio,
+  title = {Dremio},
+  url = {https://www.dremio.com/},
+  urldate = {2023-12-30},
+  organization = {{Dremio}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/GBQ8LU7Q/www.dremio.com.html}
+}
+
+@online{DuckDB,
+  title = {{{DuckDB}}},
+  url = {https://duckdb.org/},
+  urldate = {2023-07-26},
+  langid = {english},
+  organization = {{DuckDB}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/84SPRTRL/duckdb.org.html}
+}
+
+@online{Exploringthearchitectureofapacheicebergdeltalakeandapachehudi,
+  title = {Exploring-the-Architecture-of-Apache-Iceberg-Delta-Lake-and-Apache-Hudi},
+  url = {https://www.dremio.com/blog/exploring-the-architecture-of-apache-iceberg-delta-lake-and-apache-hudi/}
+}
+
+@inproceedings{fangManagingDataLakes2015,
+  title = {Managing Data Lakes in Big Data Era: {{What}}'s a Data Lake and Why Has It Became Popular in Data Management Ecosystem},
+  shorttitle = {Managing Data Lakes in Big Data Era},
+  booktitle = {2015 {{IEEE International Conference}} on {{Cyber Technology}} in {{Automation}}, {{Control}}, and {{Intelligent Systems}} ({{CYBER}})},
+  author = {Fang, Huang},
+  date = {2015-06},
+  pages = {820--824},
+  doi = {10.1109/CYBER.2015.7288049},
+  url = {https://ieeexplore.ieee.org/abstract/document/7288049},
+  urldate = {2024-01-26},
+  abstract = {The concept of a data lake is emerging as a popular way to organize and build the next generation of systems to master new big data challenges, but there are lots of concerns and questions for large enterprises to implement data lakes. The paper discusses the concept of data lakes and shares the author's thoughts and practices of data lakes.},
+  eventtitle = {2015 {{IEEE International Conference}} on {{Cyber Technology}} in {{Automation}}, {{Control}}, and {{Intelligent Systems}} ({{CYBER}})},
+  keywords = {Big data,Big Data,Companies,Data Lake,data management ecosystem,Data warehouses,Ecosystems,eneterpirse architecture,Hadoop,Lakes},
+  file = {/home/agrueneberg/Sync/Zotero/storage/5ENJE5FX/Fang - 2015 - Managing data lakes in big data era What's a data.pdf;/home/agrueneberg/Sync/Zotero/storage/NRB7ITGN/7288049.html}
+}
+
+@online{feinbergHypeCycleData,
+  title = {Hype {{Cycle}} for {{Data Management}}, 2022},
+  author = {Feinberg, Donald and Russom, Philip and Showell, Nina},
+  url = {https://www.gartner.com/doc/reprints?id=1-2B6AXOGW&ct=220920&st=sb},
+  urldate = {2023-08-01},
+  file = {/home/agrueneberg/Sync/Zotero/storage/9LTMXRA6/Feinberg et al. - Hype Cycle for Data Management, 2022.pdf}
+}
+
+@article{floratouColumnorientedStorageTechniques2011,
+  title = {Column-Oriented Storage Techniques for {{MapReduce}}},
+  author = {Floratou, Avrilia and Patel, Jignesh M. and Shekita, Eugene J. and Tata, Sandeep},
+  date = {2011-04},
+  journaltitle = {Proceedings of the VLDB Endowment},
+  shortjournal = {Proc. VLDB Endow.},
+  volume = {4},
+  number = {7},
+  pages = {419--429},
+  issn = {2150-8097},
+  doi = {10.14778/1988776.1988778},
+  url = {https://dl.acm.org/doi/10.14778/1988776.1988778},
+  urldate = {2023-11-15},
+  abstract = {Users of MapReduce often run into performance problems when they scale up their workloads. Many of the problems they encounter can be overcome by applying techniques learned from over three decades of research on parallel DBMSs. However, translating these techniques to a MapReduce implementation such as Hadoop presents unique challenges that can lead to new design choices. This paper describes how column-oriented storage techniques can be incorporated in Hadoop in a way that preserves its popular programming APIs.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/QQT3T6AH/Floratou et al. - 2011 - Column-oriented storage techniques for MapReduce.pdf}
+}
+
+@article{floratouSQLonHadoopFullCircle2014,
+  title = {{{SQL-on-Hadoop}}: Full Circle Back to Shared-Nothing Database Architectures},
+  shorttitle = {{{SQL-on-Hadoop}}},
+  author = {Floratou, Avrilia and Minhas, Umar Farooq and Özcan, Fatma},
+  date = {2014-08},
+  journaltitle = {Proceedings of the VLDB Endowment},
+  shortjournal = {Proc. VLDB Endow.},
+  volume = {7},
+  number = {12},
+  pages = {1295--1306},
+  issn = {2150-8097},
+  doi = {10.14778/2732977.2733002},
+  url = {https://dl.acm.org/doi/10.14778/2732977.2733002},
+  urldate = {2023-11-15},
+  abstract = {SQL query processing for analytics over Hadoop data has recently gained significant traction. Among many systems providing some SQL support over Hadoop, Hive is the first native Hadoop system that uses an underlying framework such as MapReduce or Tez to process SQL-like statements. Impala, on the other hand, represents the new emerging class of SQL-on-Hadoop systems that exploit a shared-nothing parallel database architecture over Hadoop. Both systems optimize their data ingestion via columnar storage, and promote different file formats: ORC and Parquet. In this paper, we compare the performance of these two systems by conducting a set of cluster experiments using a TPC-H like benchmark and two TPC-DS inspired workloads. We also closely study the I/O efficiency of their columnar formats using a set of micro-benchmarks. Our results show that Impala is 3.3X to 4.4X faster than Hive on MapReduce and 2.1X to 2.8X than Hive on Tez for the overall TPC-H experiments. Impala is also 8.2X to 10X faster than Hive on MapReduce and about 4.3X faster than Hive on Tez for the TPC-DS inspired experiments. Through detailed analysis of experimental results, we identify the reasons for this performance gap and examine the strengths and limitations of each system.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/4SCQSBVC/Floratou et al. - 2014 - SQL-on-Hadoop full circle back to shared-nothing .pdf}
+}
+
+@inproceedings{ghemawatGoogleFileSystem2003,
+  title = {The {{Google File System}}},
+  booktitle = {Proceedings of the 19th {{ACM}} Symposium on Operating Systems Principles},
+  author = {Ghemawat, Sanjay and Gobioff, Howard and Leung, Shun-Tak},
+  date = {2003},
+  pages = {20--43},
+  location = {{Bolton Landing, NY}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/Q99G9LDH/gfs-sosp2003.pdf}
+}
+
+@article{ghitWhiteboxCompressionLearning,
+  title = {White-Box {{Compression}}: {{Learning}} and {{Exploiting Compact Table Representations}}},
+  author = {Ghit, Bogdan and Tomé, Diego and Boncz, Peter},
+  abstract = {We formulate a conceptual model for white-box compression, which represents the logical columns in tabular data as an openly defined function over some actually stored physical columns. Each block of data should thus go accompanied by a header that describes this functional mapping. Because these compression functions are openly defined, database systems can exploit them using query optimization and during execution, enabling e.g. better filter predicate pushdown. In addition, we show that white-box compression is able to identify a broad variety of new opportunities for compression, leading to much better compression factors. These opportunities are identified using an automatic learning process that learns the functions from the data. We provide a recursive pattern-driven algorithm for such learning. Finally, we demonstrate the effectiveness of white-box compression on a new benchmark we contribute hereby: the Public BI benchmark provides a rich set of real-world datasets. We believe our basic prototype for white-box compression opens the way for future research into transparent compressed data representations on the one hand and database system architectures that can efficiently exploit these on the other, and should be seen as another step into the direction of data management systems that are self-learning and optimize themselves for the data they are deployed on.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/II5EHJKA/Ghit et al. - White-box Compression Learning and Exploiting Com.pdf}
+}
+
+@online{GoogleCloudStorage,
+  title = {Google {{Cloud Storage}}},
+  url = {https://cloud.google.com/storage, https://cloud.google.com/storage},
+  urldate = {2023-11-15},
+  abstract = {Cloud Storage lets you store data with multiple redundancy options, virtually anywhere.},
+  langid = {english},
+  organization = {{Google Cloud Storage}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/4E3Q3J8U/storage.html}
+}
+
+@online{GoogleFileSystem,
+  title = {The {{Google File System}}},
+  url = {https://research.google/pubs/the-google-file-system/},
+  urldate = {2024-01-05},
+  file = {/home/agrueneberg/Sync/Zotero/storage/SB3J42QH/the-google-file-system.html}
+}
+
+@inproceedings{guptaAmazonRedshiftCase2015,
+  title = {Amazon {{Redshift}} and the {{Case}} for {{Simpler Data Warehouses}}},
+  booktitle = {Proceedings of the 2015 {{ACM SIGMOD International Conference}} on {{Management}} of {{Data}}},
+  author = {Gupta, Anurag and Agarwal, Deepak and Tan, Derek and Kulesza, Jakub and Pathak, Rahul and Stefani, Stefano and Srinivasan, Vidhya},
+  date = {2015-05-27},
+  pages = {1917--1923},
+  publisher = {{ACM}},
+  location = {{Melbourne Victoria Australia}},
+  doi = {10.1145/2723372.2742795},
+  url = {https://dl.acm.org/doi/10.1145/2723372.2742795},
+  urldate = {2024-01-22},
+  abstract = {Amazon Redshift is a fast, fully managed, petabyte-scale data warehouse solution that makes it simple and cost-effective to efficiently analyze large volumes of data using existing business intelligence tools. Since launching in February 2013, it has been Amazon Web Service’s (AWS) fastest growing service, with many thousands of customers and many petabytes of data under management.},
+  eventtitle = {{{SIGMOD}}/{{PODS}}'15: {{International Conference}} on {{Management}} of {{Data}}},
+  isbn = {978-1-4503-2758-9},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/6YC3EPFC/Gupta et al. - 2015 - Amazon Redshift and the Case for Simpler Data Ware.pdf}
+}
+
+@online{HadoopAWS,
+  title = {Apache {{Hadoop}}: {{Hadoop-AWS}}},
+  url = {https://hadoop.apache.org/docs/r3.3.2/hadoop-aws/tools/hadoop-aws/index.html},
+  urldate = {2024-01-28}
+}
+
+@online{HadoopCoreDefault,
+  title = {Apache {{Hadoop}}: Core-Default.Xml},
+  url = {https://hadoop.apache.org/docs/r3.3.2/hadoop-project-dist/hadoop-common/core-default.xml},
+  urldate = {2024-01-28}
+}
+
+@online{HadoopFilesystemAPI,
+  title = {Apache {{Hadoop}}: {{The Hadoop FileSystem API Definition}}},
+  url = {https://hadoop.apache.org/docs/r3.3.2/hadoop-project-dist/hadoop-common/filesystem/index.html},
+  urldate = {2024-01-28}
+}
+
+@online{HadoopHDFS,
+  title = {Apache {{Hadoop}}: {{HDFS Architecture}}},
+  url = {https://hadoop.apache.org/docs/r3.3.2/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html},
+  urldate = {2024-01-21}
+}
+
+@report{HadoopMigrationGuide,
+  type = {White Paper},
+  title = {Hadoop {{Migration Guide}}},
+  institution = {{MinIO}},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/9YCKLYF6/Hadoop Migration Guide.pdf}
+}
+
+@online{HadoopS3A,
+  title = {Apache {{Hadoop}}: {{Maximizing Performance}} When Working with the {{S3A Connector}}},
+  url = {https://hadoop.apache.org/docs/r3.3.2/hadoop-aws/tools/hadoop-aws/performance.html},
+  urldate = {2024-01-28}
+}
+
+@article{haerderPrinciplesTransactionorientedDatabase1983,
+  title = {Principles of Transaction-Oriented Database Recovery},
+  author = {Haerder, Theo and Reuter, Andreas},
+  date = {1983-12-02},
+  journaltitle = {ACM Computing Surveys},
+  shortjournal = {ACM Comput. Surv.},
+  volume = {15},
+  number = {4},
+  pages = {287--317},
+  issn = {0360-0300},
+  doi = {10.1145/289.291},
+  url = {https://dl.acm.org/doi/10.1145/289.291},
+  urldate = {2023-11-27},
+  file = {/home/agrueneberg/Sync/Zotero/storage/SEKM7UNW/Haerder and Reuter - 1983 - Principles of transaction-oriented database recove.pdf}
+}
+
+@online{hambardzumyanDeepLakeLakehouse2022,
+  title = {Deep {{Lake}}: A {{Lakehouse}} for {{Deep Learning}}},
+  shorttitle = {Deep {{Lake}}},
+  author = {Hambardzumyan, Sasun and Tuli, Abhinav and Ghukasyan, Levon and Rahman, Fariz and Topchyan, Hrant and Isayan, David and McQuade, Mark and Harutyunyan, Mikayel and Hakobyan, Tatevik and Stranic, Ivo and Buniatyan, Davit},
+  date = {2022-12-13},
+  eprint = {2209.10785},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2209.10785},
+  url = {http://arxiv.org/abs/2209.10785},
+  urldate = {2024-01-26},
+  abstract = {Traditional data lakes provide critical data infrastructure for analytical workloads by enabling time travel, running SQL queries, ingesting data with ACID transactions, and visualizing petabyte-scale datasets on cloud storage. They allow organizations to break down data silos, unlock data-driven decision-making, improve operational efficiency, and reduce costs. However, as deep learning usage increases, traditional data lakes are not well-designed for applications such as natural language processing (NLP), audio processing, computer vision, and applications involving non-tabular datasets. This paper presents Deep Lake, an open-source lakehouse for deep learning applications developed at Activeloop. Deep Lake maintains the benefits of a vanilla data lake with one key difference: it stores complex data, such as images, videos, annotations, as well as tabular data, in the form of tensors and rapidly streams the data over the network to (a) Tensor Query Language, (b) in-browser visualization engine, or (c) deep learning frameworks without sacrificing GPU utilization. Datasets stored in Deep Lake can be accessed from PyTorch, TensorFlow, JAX, and integrate with numerous MLOps tools.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Databases,{Computer Science - Distributed, Parallel, and Cluster Computing}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/M26A6FGQ/Hambardzumyan et al. - 2022 - Deep Lake a Lakehouse for Deep Learning.pdf;/home/agrueneberg/Sync/Zotero/storage/NS5HKGBE/2209.html}
+}
+
+@inproceedings{harbyDataWarehouseLakehouse2022,
+  title = {From {{Data Warehouse}} to {{Lakehouse}}: {{A Comparative Review}}},
+  shorttitle = {From {{Data Warehouse}} to {{Lakehouse}}},
+  booktitle = {2022 {{IEEE International Conference}} on {{Big Data}} ({{Big Data}})},
+  author = {Harby, Ahmed A. and Zulkernine, Farhana},
+  date = {2022-12},
+  pages = {389--395},
+  doi = {10.1109/BigData55660.2022.10020719},
+  url = {https://ieeexplore.ieee.org/abstract/document/10020719?casa_token=GpLIWyuJXHAAAAAA:RbB1zZHVFDudYZrxitgsooRg_Pl-Rwm4NlnNNJTF6azCmBPIb6vkYcRmz0iI_wRlTOD5UppL},
+  urldate = {2024-01-14},
+  abstract = {Digital information systems currently generate a vast amount of data every minute which emphasizes the continuing need to advance big data management systems with efficient data ingestion and knowledge extraction capabilities. To address the ‘big data’ problems due to high volume, velocity, variety, and veracity, data management systems evolved from structured databases to big data storage systems, graph databases, data warehouses, and data lakes but each solution has its strengths and shortcomings. The need to produce actionable knowledge fast from unstructured data ingested from distributed sources requires a marriage of data warehouses and data lakes to create a data Lakehouse (LH). The objective is to use the strengths of the data warehouse in producing insights fast from processed merged data, and of the data lake in ingesting and storing high-speed unstructured data with post-storage transformation and analytics capabilities. In this paper, we present a comparative review of the existing data warehouse and data lake technology to highlight their strengths and weaknesses and propose the desired and necessary features of the LH architecture, which has recently gained a lot of attention in the big data management research community.},
+  eventtitle = {2022 {{IEEE International Conference}} on {{Big Data}} ({{Big Data}})},
+  file = {/home/agrueneberg/Sync/Zotero/storage/PPSJDDSZ/Harby and Zulkernine - 2022 - From Data Warehouse to Lakehouse A Comparative Re.pdf;/home/agrueneberg/Sync/Zotero/storage/QQTI278A/10020719.html}
+}
+
+@article{hausenblasApacheDrillInteractive2013,
+  title = {Apache {{Drill}}: {{Interactive Ad-Hoc Analysis}} at {{Scale}}},
+  shorttitle = {Apache {{Drill}}},
+  author = {Hausenblas, Michael and Nadeau, Jacques},
+  date = {2013-06},
+  journaltitle = {Big Data},
+  volume = {1},
+  number = {2},
+  pages = {100--104},
+  publisher = {{Mary Ann Liebert, Inc., publishers}},
+  issn = {2167-6461},
+  doi = {10.1089/big.2013.0011},
+  url = {https://www.liebertpub.com/doi/10.1089/big.2013.0011},
+  urldate = {2024-01-22},
+  abstract = {Apache Drill is a distributed system for interactive ad-hoc analysis of large-scale datasets. Designed to handle up to petabytes of data spread across thousands of servers, the goal of Drill is to respond to ad-hoc queries in a low-latency manner. In this article, we introduce Drill's architecture, discuss its extensibility points, and put it into the context of the emerging offerings in the interactive analytics realm.},
+  file = {/home/agrueneberg/Sync/Zotero/storage/GM5EQB3U/Hausenblas and Nadeau - 2013 - Apache Drill Interactive Ad-Hoc Analysis at Scale.pdf}
+}
+
+@online{HBASE61CreateHBasespecific,
+  title = {[{{HBASE-61}}] {{Create}} an {{HBase-specific MapFile}} Implementation},
+  url = {https://issues.apache.org/jira/browse/HBASE-61},
+  urldate = {2024-01-21}
+}
+
+@online{HDFGroup,
+  title = {The {{HDF Group}}},
+  url = {https://portal.hdfgroup.org/},
+  urldate = {2023-12-30},
+  abstract = {Ensuring long-term access and usability of HDF data and supporting users of HDF technologies},
+  langid = {american},
+  organization = {{The HDF Group}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/CHTKTN45/portal.hdfgroup.org.html}
+}
+
+@thesis{hellmanStudyComparisonData2023,
+  title = {Study and {{Comparison}} of {{Data Lakehouse Systems}}},
+  author = {Hellman, Fredrik},
+  date = {2023},
+  institution = {{Faculty of Science and Engineering Information Technology, Vaasa Åbo Akademi University}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/L6MNK96N/Hellman - 2023 - Study and Comparison of Data Lakehouse Systems.pdf}
+}
+
+@inproceedings{heRCFileFastSpaceefficient2011,
+  title = {{{RCFile}}: {{A}} Fast and Space-Efficient Data Placement Structure in {{MapReduce-based}} Warehouse Systems},
+  shorttitle = {{{RCFile}}},
+  booktitle = {2011 {{IEEE}} 27th {{International Conference}} on {{Data Engineering}}},
+  author = {He, Yongqiang and Lee, Rubao and Huai, Yin and Shao, Zheng and Jain, Namit and Zhang, Xiaodong and Xu, Zhiwei},
+  date = {2011-04},
+  pages = {1199--1208},
+  publisher = {{IEEE}},
+  location = {{Hannover, Germany}},
+  doi = {10.1109/ICDE.2011.5767933},
+  url = {http://ieeexplore.ieee.org/document/5767933/},
+  urldate = {2023-10-11},
+  eventtitle = {2011 {{IEEE International Conference}} on {{Data Engineering}} ({{ICDE}} 2011)},
+  isbn = {978-1-4244-8959-6},
+  file = {/home/agrueneberg/Sync/Zotero/storage/HKMIHESW/He et al. - 2011 - RCFile A fast and space-efficient data placement .pdf}
+}
+
+@online{HIVE17168CreateSeparate,
+  title = {[{{HIVE-17168}}] {{Create}} Separate Module for Stand Alone Metastore},
+  url = {https://issues.apache.org/jira/browse/HIVE-17168},
+  urldate = {2024-01-22},
+  organization = {{ASF JIRA}}
+}
+
+@misc{HiveMetastoreSchema,
+  title = {Hive {{Metastore Schema}}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/VEXGQMXV/HiveMetaStore.pdf}
+}
+
+@inproceedings{huaiMajorTechnicalAdvancements2014,
+  title = {Major Technical Advancements in Apache Hive},
+  booktitle = {Proceedings of the 2014 {{ACM SIGMOD International Conference}} on {{Management}} of {{Data}}},
+  author = {Huai, Yin and Chauhan, Ashutosh and Gates, Alan and Hagleitner, Gunther and Hanson, Eric N. and O'Malley, Owen and Pandey, Jitendra and Yuan, Yuan and Lee, Rubao and Zhang, Xiaodong},
+  date = {2014-06-18},
+  pages = {1235--1246},
+  publisher = {{ACM}},
+  location = {{Snowbird Utah USA}},
+  doi = {10.1145/2588555.2595630},
+  url = {https://dl.acm.org/doi/10.1145/2588555.2595630},
+  urldate = {2023-11-15},
+  abstract = {Apache Hive is a widely used data warehouse system for Apache Hadoop, and has been adopted by many organizations for various big data analytics applications. Closely working with many users and organizations, we have identified several shortcomings of Hive in its file formats, query planning, and query execution, which are key factors determining the performance of Hive. In order to make Hive continuously satisfy the requests and requirements of processing increasingly high volumes data in a scalable and efficient way, we have set two goals related to storage and runtime performance in our efforts on advancing Hive. First, we aim to maximize the effective storage capacity and to accelerate data accesses to the data warehouse by updating the existing file formats. Second, we aim to significantly improve cluster resource utilization and runtime performance of Hive by developing a highly optimized query planner and a highly efficient query execution engine. In this paper, we present a community-based effort on technical advancements in Hive. Our performance evaluation shows that these advancements provide significant improvements on storage efficiency and query execution performance. This paper also shows how academic research lays a foundation for Hive to improve its daily operations.},
+  eventtitle = {{{SIGMOD}}/{{PODS}}'14: {{International Conference}} on {{Management}} of {{Data}}},
+  isbn = {978-1-4503-2376-5},
+  langid = {english},
+  keywords = {data warehouse,databases,hadoop,hive,mapreduce},
+  file = {/home/agrueneberg/Sync/Zotero/storage/VUXG2Y8V/Huai et al. - 2014 - Major technical advancements in apache hive.pdf}
+}
+
+@online{HUDI6730EnableHoodiea,
+  title = {[{{HUDI-6730}}] {{Enable}} Hoodie Configuration Using the --Conf Option with the "Spark." Prefix},
+  url = {https://issues.apache.org/jira/browse/HUDI-6730},
+  urldate = {2024-01-18}
+}
+
+@online{HUDI7020FixConnector,
+  title = {[{{HUDI-7020}}] {{Fix}} the Connector to Make Use of Metadata Based Listing},
+  url = {https://issues.apache.org/jira/browse/HUDI-7020},
+  urldate = {2024-01-09},
+  file = {/home/agrueneberg/Sync/Zotero/storage/US4JEWW5/HUDI-7020.html}
+}
+
+@online{HudiAllConfigurations,
+  title = {Hudi {{Documentation}}: {{All Configurations}}},
+  url = {https://hudi.apache.org/docs/0.14.0/configurations/},
+  urldate = {2024-01-28}
+}
+
+@online{HudiCleaning,
+  title = {Hudi {{Documentation}}: {{Cleaning}}},
+  url = {https://hudi.apache.org/docs/0.14.0/hoodie_cleaner/},
+  urldate = {2024-01-28}
+}
+
+@online{HudiClustering,
+  title = {Hudi {{Documentation}}: {{Clustering}}},
+  url = {https://hudi.apache.org/docs/0.14.0/clustering/},
+  urldate = {2024-01-18}
+}
+
+@online{HudiRelease14,
+  title = {Hudi: {{Release}} 0.14.0},
+  url = {https://hudi.apache.org/releases/release-0.14.0/},
+  urldate = {2024-01-28}
+}
+
+@online{HudiRFC03,
+  title = {Hudi {{RFC}} 03 : {{Timeline Service}} with {{Incremental File System View Syncing}}},
+  url = {https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=113708965},
+  urldate = {2024-01-23}
+}
+
+@online{HudiRFC08,
+  title = {Hudi {{RFC}} 08: {{Metadata}} Based {{Record Index}}},
+  url = {https://github.com/apache/hudi/blob/master/rfc/rfc-8/rfc-8.md},
+  urldate = {2024-01-28}
+}
+
+@online{HudiRFC15,
+  title = {Hudi {{RFC}} 15: {{HUDI Metadata Table}} and {{Cloud}}/{{DFS File Listing Improvements}}},
+  url = {https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=147427331},
+  urldate = {2024-01-23}
+}
+
+@online{HudiRFC27,
+  title = {Hudi {{RFC}} 27: {{Data}} Skipping Index to Improve Query Performance},
+  url = {https://cwiki.apache.org/confluence/display/HUDI/RFC-27+Data+skipping+index+to+improve+query+performance},
+  urldate = {2024-01-18}
+}
+
+@online{HudiRFC37,
+  title = {Hudi {{RFC}} 37: {{Metadata}} Based {{Bloom Index}}},
+  url = {https://github.com/apache/hudi/blob/master/rfc/rfc-37/rfc-37.md},
+  urldate = {2024-01-28}
+}
+
+@online{HudiRFC69,
+  title = {Hudi {{RFC}} 69: {{Hudi}} 1.{{X}}},
+  url = {https://github.com/apache/hudi/blob/master/rfc/rfc-69/rfc-69.md},
+  urldate = {2024-01-09}
+}
+
+@online{HudiRFC73,
+  title = {Hudi {{RFC}} 73: {{Multi-Table Transactions}}},
+  url = {https://github.com/codope/hudi/blob/master/rfc/rfc-73/rfc-73.md},
+  urldate = {2024-01-31}
+}
+
+@online{hudsonDremioBlogAnnouncing2023,
+  title = {Dremio {{Blog}}: {{Announcing Automated Iceberg Table Cleanup}}},
+  author = {Hudson, Ben and Raheja, Manoj},
+  date = {2023-12-15},
+  url = {https://www.dremio.com/blog/announcing-automated-iceberg-table-cleanup/},
+  urldate = {2024-01-10},
+  file = {/home/agrueneberg/Sync/Zotero/storage/TMLH4YZW/announcing-automated-iceberg-table-cleanup.html}
+}
+
+@inproceedings{hupplerArtBuildingGood2009,
+  title = {The {{Art}} of {{Building}} a {{Good Benchmark}}},
+  booktitle = {Performance {{Evaluation}} and {{Benchmarking}}},
+  author = {Huppler, Karl},
+  editor = {Nambiar, Raghunath and Poess, Meikel},
+  date = {2009},
+  series = {Lecture {{Notes}} in {{Computer Science}}},
+  pages = {18--30},
+  publisher = {{Springer}},
+  location = {{Berlin, Heidelberg}},
+  doi = {10.1007/978-3-642-10424-4_3},
+  abstract = {What makes a good benchmark? This is a question that has been asked often, answered often, altered often. In the past 25 years, the information processing industry has seen the creation of dozens of “industry standard” performance benchmarks – some highly successful, some less so. This paper will explore the overall requirements of a good benchmark, using existing industry standards as examples along the way.},
+  isbn = {978-3-642-10424-4},
+  langid = {english},
+  keywords = {Benchmark Result,Benchmark Suite,Performance Benchmark,Target Audience,Transaction Processing},
+  file = {/home/agrueneberg/Sync/Zotero/storage/LY4IP9LF/Huppler - 2009 - The Art of Building a Good Benchmark.pdf}
+}
+
+@online{IBMWatsonxData,
+  title = {{{IBM}} Watsonx.Data},
+  url = {https://www.ibm.com/products/watsonx-data},
+  urldate = {2024-02-02}
+}
+
+@online{IcebergCatalogs,
+  title = {Iceberg {{Catalogs}}},
+  url = {https://iceberg.apache.org/concepts/catalog/},
+  urldate = {2024-01-18}
+}
+
+@online{IcebergMaintenance,
+  title = {Iceberg {{Documentation}}: {{Maintenance}}},
+  url = {https://iceberg.apache.org/docs/1.4.3/maintenance/},
+  urldate = {2024-01-28}
+}
+
+@online{IcebergPerformance,
+  title = {Iceberg {{Documentation}}: {{Performance}}},
+  url = {https://iceberg.apache.org/docs/1.4.3/performance/},
+  urldate = {2024-01-18}
+}
+
+@online{IcebergProcedures,
+  title = {Iceberg {{Documentation}}: {{Spark Procedures}}},
+  url = {https://iceberg.apache.org/docs/1.4.3/spark-procedures/},
+  urldate = {2024-01-18}
+}
+
+@online{IcebergPuffinSpec,
+  title = {Iceberg {{Puffin Spec}}},
+  url = {https://iceberg.apache.org/puffin-spec/},
+  urldate = {2024-01-28}
+}
+
+@online{IcebergTableSpec,
+  title = {Iceberg {{Table Spec}}},
+  url = {https://iceberg.apache.org/spec/},
+  urldate = {2023-09-06},
+  file = {/home/agrueneberg/Sync/Zotero/storage/3DZTMNED/spec.html}
+}
+
+@online{IcebergWriteProperties,
+  title = {Iceberg {{Documentation}}: {{Write Properties}}},
+  url = {https://iceberg.apache.org/docs/1.4.3/configuration/#write-properties},
+  urldate = {2024-01-28}
+}
+
+@online{IntroducingParquetEfficient2013,
+  title = {Introducing {{Parquet}}: {{Efficient Columnar Storage}} for {{Apache Hadoop}}},
+  shorttitle = {Introducing {{Parquet}}},
+  date = {2013-05-04},
+  url = {https://web.archive.org/web/20130504133255/http://blog.cloudera.com/blog/2013/03/introducing-parquet-columnar-storage-for-apache-hadoop/},
+  urldate = {2024-01-22},
+  file = {/home/agrueneberg/Sync/Zotero/storage/79VTWZ6D/introducing-parquet-columnar-storage-for-apache-hadoop.html}
+}
+
+@article{ivanovImpactColumnarFile2020,
+  title = {The Impact of Columnar File Formats on {{SQL}}‐on‐hadoop Engine Performance: {{A}} Study on {{ORC}} and {{Parquet}}},
+  shorttitle = {The Impact of Columnar File Formats on {{SQL}}‐on‐hadoop Engine Performance},
+  author = {Ivanov, Todor and Pergolesi, Matteo},
+  date = {2020-03-10},
+  journaltitle = {Concurrency and Computation: Practice and Experience},
+  shortjournal = {Concurrency and Computation},
+  volume = {32},
+  number = {5},
+  pages = {e5523},
+  issn = {1532-0626, 1532-0634},
+  doi = {10.1002/cpe.5523},
+  url = {https://onlinelibrary.wiley.com/doi/10.1002/cpe.5523},
+  urldate = {2023-11-15},
+  abstract = {Summary             Columnar file formats provide an efficient way to store data to be queried by SQL‐on‐Hadoop engines. Related works consider the performance of processing engine and file format together, which makes it impossible to predict their individual impact. In this work, we propose an alternative approach: by executing each file format on the same processing engine, we compare the different file formats as well as their different parameter settings. We apply our strategy to two processing engines, Hive and SparkSQL, and evaluate the performance of two columnar file formats, ORC and Parquet. We use BigBench (TPCx‐BB), a standardized application‐level benchmark for Big Data scenarios. Our experiments confirm that the file format selection and its configuration significantly affect the overall performance. We show that ORC generally performs better on Hive, whereas Parquet achieves best performance with SparkSQL. Using ZLIB compression brings up to 60.2\% improvement with ORC, while Parquet achieves up to 7\% improvement with Snappy. Exceptions are the queries involving text processing, which do not benefit from using any compression.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/A52XCSIA/Ivanov and Pergolesi - 2020 - The impact of columnar file formats on SQL‐on‐hado.pdf}
+}
+
+@article{jainAnalyzingComparingLakehouse2023,
+  title = {Analyzing and {{Comparing Lakehouse Storage Systems}}},
+  author = {Jain, Paras and Kraft, Peter and Power, Conor and Das, Tathagata and Stoica, Ion and Zaharia, Matei},
+  date = {2023},
+  abstract = {Lakehouse storage systems that implement ACID transactions and other management features over data lake storage, such as Delta Lake, Apache Hudi and Apache Iceberg, have rapidly grown in popularity, replacing traditional data lakes at many organizations. These open storage systems with rich management features promise to simplify management of large datasets, accelerate SQL workloads, and offer fast, direct file access for other workloads, such as machine learning. However, the research community has not explored the tradeoffs in designing lakehouse systems in detail. In this paper, we analyze the designs of the three most popular lakehouse storage systems—Delta Lake, Hudi and Iceberg—and compare their performance and features among varying axes based on these designs. We also release a simple benchmark, LHBench, that researchers can use to compare other designs. LHBench is available at https://github.com/lhbench/lhbench.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/AAVP29DV/Jain et al. - 2023 - Analyzing and Comparing Lakehouse Storage Systems.pdf}
+}
+
+@online{Jq,
+  title = {Jq},
+  url = {https://jqlang.github.io/jq/},
+  urldate = {2024-01-08},
+  file = {/home/agrueneberg/Sync/Zotero/storage/I7DUWCHG/jq.html}
+}
+
+@online{JSONLines,
+  title = {{{JSON Lines}}},
+  url = {https://jsonlines.org/},
+  urldate = {2024-01-08},
+  file = {/home/agrueneberg/Sync/Zotero/storage/7LUJ3L8H/jsonlines.org.html}
+}
+
+@article{khatiwadaIntegratingDataLake2022,
+  title = {Integrating Data Lake Tables},
+  author = {Khatiwada, Aamod and Shraga, Roee and Gatterbauer, Wolfgang and Miller, Renée J.},
+  date = {2022},
+  journaltitle = {Proc. VLDB Endow.},
+  volume = {16},
+  number = {4},
+  pages = {932--945},
+  doi = {10.14778/3574245.3574274},
+  url = {https://www.vldb.org/pvldb/vol16/p932-khatiwada.pdf},
+  bibsource = {dblp computer science bibliography, https://dblp.org},
+  timestamp = {Sat, 28 Oct 2023 13:59:30 +0200},
+  file = {/home/agrueneberg/Sync/Zotero/storage/K262RA3T/Khatiwada et al. - 2022 - Integrating data lake tables.pdf}
+}
+
+@inproceedings{komolovEmpiricalStudyMultithreading2020,
+  title = {An Empirical Study of Multi-Threading Paradigms {{Reactive}} Programming vs Continuation-Passing Style},
+  booktitle = {2020 the 3rd {{International Conference}} on {{Computing}} and {{Big Data}}},
+  author = {Komolov, Sirojiddin and Askarbekuly, Nursultan and Mazzara, Manuel},
+  date = {2020-11-06},
+  series = {{{ICCBD}} '20},
+  pages = {37--41},
+  publisher = {{Association for Computing Machinery}},
+  location = {{New York, NY, USA}},
+  doi = {10.1145/3418688.3418695},
+  url = {https://doi.org/10.1145/3418688.3418695},
+  urldate = {2023-07-18},
+  abstract = {This paper compares two popular multi-threading paradigms: reactive programming and continuation-passing style as today there are many software paradigms which could be replaced by each other, and programmers sometimes have dilemma which one to choose. . To conduct the comparison, the paper proposes a method for evaluating software paradigms in regards to Maintainability, Performance and Testability quality attributes, chosen due to their importance in modern software development. RxJava and Kotlin Coroutines serve as the specific implementations of the two paradigms, since both enjoy popularity in the industry and have proven themselves in real-world projects. As a result, the paper identifies that both frameworks have similar characteristics in regards to performance and testability, however Kotlin Coroutines demonstrates better maintainability. Moreover, the paper establishes a multi-dimensional evaluation method for comparing the frameworks, and identifies what factors should be taken into account when selecting a particular programming paradigm, also these findings could be used in software patterns comparison with some improvements and modifications.},
+  isbn = {978-1-4503-8786-6},
+  keywords = {continuation-passing style,Kotlin Coroutines,multi-threading,programming paradigms,reactive programming,RxJava}
+}
+
+@inproceedings{kornackerImpalaModernOpensource2015,
+  title = {Impala: {{A}} Modern, Open-Source {{SQL}} Engine for {{Hadoop}}},
+  booktitle = {Proceedings of the 7th Biennial Conference on Innovative Data Systems Research},
+  author = {Kornacker, Marcel and Behm, Alexander and Bittorf, Victor and Bobrovytsky, Taras and Ching, Casey and Choi, Alan and Erickson, Justin and Grund, Martin and Hecht, Daniel and Jacobs, Matthew and Joshi, Ishaan and Kuff, Lenni and Kumar, Dileep and Leblang, Alex and Li, Nong and Pandis, Ippokratis and Robinson, Henry and Rorke, David and Rus, Silvius and Russell, John and Tsirogiannis, Dimitris and Wanderman-Milne, Skye and Yoder, Michael},
+  date = {2015},
+  pages = {1--10},
+  file = {/home/agrueneberg/Sync/Zotero/storage/ER6FML7K/Pandis - Impala A Modern, Open-Source SQL Engine for Hadoo.pdf}
+}
+
+@article{lambVerticaAnalyticDatabase2012,
+  title = {The Vertica Analytic Database: {{C-store}} 7 Years Later},
+  shorttitle = {The Vertica Analytic Database},
+  author = {Lamb, Andrew and Fuller, Matt and Varadarajan, Ramakrishna and Tran, Nga and Vandiver, Ben and Doshi, Lyric and Bear, Chuck},
+  date = {2012-08-01},
+  journaltitle = {Proceedings of the VLDB Endowment},
+  shortjournal = {Proc. VLDB Endow.},
+  volume = {5},
+  number = {12},
+  pages = {1790--1801},
+  issn = {2150-8097},
+  doi = {10.14778/2367502.2367518},
+  url = {https://doi.org/10.14778/2367502.2367518},
+  urldate = {2024-01-13},
+  abstract = {This paper describes the system architecture of the Vertica Analytic Database (Vertica), a commercialization of the design of the C-Store research prototype. Vertica demonstrates a modern commercial RDBMS system that presents a classical relational interface while at the same time achieving the high performance expected from modern "web scale" analytic systems by making appropriate architectural choices. Vertica is also an instructive lesson in how academic systems research can be directly commercialized into a successful product.},
+  file = {/home/agrueneberg/Sync/Zotero/storage/WKI7CYJ7/Lamb et al. - 2012 - The vertica analytic database C-store 7 years lat.pdf}
+}
+
+@article{liuDeepDiveCommon2023,
+  title = {A {{Deep Dive}} into {{Common Open Formats}} for {{Analytical DBMSs}}},
+  author = {Liu, Chunwei and Pavlenko, Anna and Interlandi, Matteo and Haynes, Brandon},
+  date = {2023-07-01},
+  journaltitle = {Proceedings of the VLDB Endowment},
+  shortjournal = {Proc. VLDB Endow.},
+  volume = {16},
+  number = {11},
+  pages = {3044--3056},
+  issn = {2150-8097},
+  doi = {10.14778/3611479.3611507},
+  url = {https://dl.acm.org/doi/10.14778/3611479.3611507},
+  urldate = {2024-01-13},
+  abstract = {This paper evaluates the suitability of Apache Arrow, Parquet, and ORC as formats for subsumption in an analytical DBMS. We systematically identify and explore the high-level features that are important to support efficient querying in modern OLAP DBMSs and evaluate the ability of each format to support these features. We find that each format has trade-offs that make it more or less suitable for use as a format in a DBMS and identify opportunities to more holistically co-design a unified in-memory and on-disk data representation. Our hope is that this study can be used as a guide for system developers designing and using these formats, as well as provide the community with directions to pursue for improving these common open formats.},
+  file = {/home/agrueneberg/Sync/Zotero/storage/5HF2RAQY/p3044-liu.pdf;/home/agrueneberg/Sync/Zotero/storage/L5TT82DW/Liu et al. - 2023 - A Deep Dive into Common Open Formats for Analytica.pdf}
+}
+
+@inproceedings{liuIoTLakehouseNew2023,
+  title = {{{IoT Lakehouse}}: {{A New Data Management Paradigm}} for~{{AIoT}}},
+  shorttitle = {{{IoT Lakehouse}}},
+  booktitle = {Big {{Data}} – {{BigData}} 2023},
+  author = {Liu, Guochuan and Pang, Zhenjiang and Zeng, Jing and Hong, Haimin and Sun, Yongming and Su, Mingjie and Ma, Nan},
+  editor = {Zhang, Shunli and Hu, Bo and Zhang, Liang-Jie},
+  date = {2023},
+  series = {Lecture {{Notes}} in {{Computer Science}}},
+  pages = {34--47},
+  publisher = {{Springer Nature Switzerland}},
+  location = {{Cham}},
+  doi = {10.1007/978-3-031-44725-9_3},
+  abstract = {The Internet of Things (IoT) and Artificial Intelligence of Things (AIoT) are emerging as promising paradigms for enabling ubiquitous and intelligent applications across various domains. However, managing and utilizing the massive and heterogeneous data generated by IoT and AIoT devices poses significant challenges for traditional data management systems. In this paper, we present a new data management paradigm called IoT Lakehouse, which aims to integrate the best practices of data warehouse and data lake to provide a unified, scalable and efficient platform for IoT and AIoT data. We define the concept and characteristics of IoT Lakehouse, and compare it with other existing data management paradigms. We present a refercence architecture and key technologies of IoT Lakehouse, and discuss how it supports various needs and scenarios of AIoT. We also analyze the main challenges and future directions of IoT Lakehouse research and development.},
+  isbn = {978-3-031-44725-9},
+  langid = {english},
+  keywords = {AIoT,Data Platform,Lakehouse}
+}
+
+@online{mazumdarDataLakehouseData2023,
+  title = {The {{Data Lakehouse}}: {{Data Warehousing}} and {{More}}},
+  shorttitle = {The {{Data Lakehouse}}},
+  author = {Mazumdar, Dipankar and Hughes, Jason and Onofre, J. B.},
+  date = {2023-10-12},
+  eprint = {2310.08697},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  url = {http://arxiv.org/abs/2310.08697},
+  urldate = {2023-11-15},
+  abstract = {Relational Database Management Systems designed for Online Analytical Processing (RDBMS-OLAP) have been foundational to democratizing data and enabling analytical use cases such as business intelligence and reporting for many years. However, RDBMS-OLAP systems present some well-known challenges. They are primarily optimized only for relational workloads, lead to proliferation of data copies which can become unmanageable, and since the data is stored in proprietary formats, it can lead to vendor lock-in, restricting access to engines, tools, and capabilities beyond what the vendor offers. As the demand for data-driven decision making surges, the need for a more robust data architecture to address these challenges becomes ever more critical. Cloud data lakes have addressed some of the shortcomings of RDBMS-OLAP systems, but they present their own set of challenges. More recently, organizations have often followed a two-tier architectural approach to take advantage of both these platforms, leveraging both cloud data lakes and RDBMSOLAP systems. However, this approach brings additional challenges, complexities, and overhead.},
+  langid = {english},
+  pubstate = {preprint},
+  keywords = {Computer Science - Databases},
+  file = {/home/agrueneberg/Sync/Zotero/storage/IP6UZ6QP/Mazumdar et al. - 2023 - The Data Lakehouse Data Warehousing and More.pdf}
+}
+
+@article{melnikDremelDecadeInteractive2020,
+  title = {Dremel: A Decade of Interactive {{SQL}} Analysis at Web Scale},
+  shorttitle = {Dremel},
+  author = {Melnik, Sergey and Gubarev, Andrey and Long, Jing Jing and Romer, Geoffrey and Shivakumar, Shiva and Tolton, Matt and Vassilakis, Theo and Ahmadi, Hossein and Delorey, Dan and Min, Slava and Pasumansky, Mosha and Shute, Jeff},
+  date = {2020-08},
+  journaltitle = {Proceedings of the VLDB Endowment},
+  shortjournal = {Proc. VLDB Endow.},
+  volume = {13},
+  number = {12},
+  pages = {3461--3472},
+  issn = {2150-8097},
+  doi = {10.14778/3415478.3415568},
+  url = {https://dl.acm.org/doi/10.14778/3415478.3415568},
+  urldate = {2023-12-21},
+  abstract = {Google’s Dremel was one of the first systems that combined a set of architectural principles that have become a common practice in today’s cloud-native analytics tools, including disaggregated storage and compute, in situ analysis, and columnar storage for semistructured data. In this paper, we discuss how these ideas evolved in the past decade and became the foundation for Google BigQuery.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/KD2HMTNV/Melnik et al. - 2020 - Dremel a decade of interactive SQL analysis at we.pdf}
+}
+
+@inproceedings{melnikDremelInteractiveAnalysis2010,
+  title = {Dremel: {{Interactive Analysis}} of {{Web-Scale Datasets}}},
+  shorttitle = {Dremel},
+  booktitle = {Proc. of the 36th {{Int}}'l {{Conf}} on {{Very Large Data Bases}}},
+  author = {Melnik, Sergey and Gubarev, Andrey and Long, Jing Jing and Romer, Geoffrey and Shivakumar, Shiva and Tolton, Matt and Vassilakis, Theo},
+  date = {2010},
+  pages = {330--339},
+  url = {http://www.vldb2010.org/accept.htm},
+  urldate = {2023-08-28},
+  file = {/home/agrueneberg/Sync/Zotero/storage/CUIHLDF9/Melnik et al. - 2010 - Dremel Interactive Analysis of Web-Scale Datasets.pdf}
+}
+
+@online{mercedExploringArchitectureApache2023,
+  title = {Exploring the {{Architecture}} of {{Apache Iceberg}}, {{Delta Lake}}, and {{Apache Hudi}}},
+  author = {Merced, Alex},
+  date = {2023-09-21T23:58:37+00:00},
+  url = {https://www.dremio.com/blog/exploring-the-architecture-of-apache-iceberg-delta-lake-and-apache-hudi/},
+  urldate = {2023-09-22},
+  abstract = {Each format takes a very different approach to maintain metadata for enabling ACID transactions, time travel, and schema evolution in the data lakehouse. Hopefully, this helps you better understand the internal structures of these data lakehouse table formats.},
+  langid = {american},
+  organization = {{Dremio}}
+}
+
+@online{mercedUseCasesDremio2023,
+  title = {5 {{Use Cases}} for the {{Dremio Lakehouse}}},
+  author = {Merced, Alex},
+  date = {2023-08-16T16:29:57+00:00},
+  url = {https://www.dremio.com/blog/5-use-cases-for-the-dremio-lakehouse/},
+  urldate = {2023-09-22},
+  abstract = {With its capabilities in on-prem to cloud migration, data warehouse offload, data virtualization, upgrading data lakes and lakehouses, and building customer-facing analytics applications, Dremio provides the tools and functionalities to streamline operations and unlock the full potential of data assets.},
+  langid = {american},
+  organization = {{Dremio}}
+}
+
+@online{MinIO,
+  title = {{{MinIO}}},
+  url = {https://min.io/},
+  urldate = {2023-11-15},
+  organization = {{MinIO}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/BI5HVBID/min.io.html}
+}
+
+@online{MinIODocumentationDeploy,
+  title = {{{MinIO Documentation}}: {{Deploy MinIO}}: {{Single-Node Multi-Drive}}},
+  url = {https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-single-node-multi-drive.html},
+  urldate = {2024-01-08},
+  file = {/home/agrueneberg/Sync/Zotero/storage/MMWFGKCP/deploy-minio-single-node-multi-drive.html}
+}
+
+@online{MinioMinioGitHub,
+  title = {Minio/Minio on {{GitHub}}: {{Pull Request}} \#18154 - Add Max-Keys=2 Optimization for Spark Workloads},
+  url = {https://github.com/minio/minio/pull/18154},
+  urldate = {2024-01-09},
+  langid = {english},
+  organization = {{GitHub}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/XQ9MW9XF/18154.html}
+}
+
+@online{MinioMinioGitHuba,
+  title = {Minio/Minio on {{GitHub}}: {{Discussion}} \#15669 - {{Minio Cache Feature}}},
+  url = {https://github.com/minio/minio/discussions/15669#discussioncomment-3606119},
+  urldate = {2024-01-19}
+}
+
+@online{MinioMiniopyGitHub,
+  title = {Minio/Minio-Py on {{GitHub}}: {{Highlighted Source Code}} of Minio/Api.Py},
+  url = {https://github.com/minio/minio-py/blob/8d172fff1ee9bad8d4e53f4057507ebec65643f1/minio/api.py#L159-L170},
+  urldate = {2024-01-09},
+  langid = {english},
+  organization = {{GitHub}}
+}
+
+@online{MinioMiniopyGitHuba,
+  title = {Minio/Minio-Py on {{GitHub}}: {{Highlighted Source Code}} of Minio/Api.Py},
+  url = {https://github.com/minio/minio-py/blob/67aab07025addcccda8d90115279845268bee930/minio/api.py#L3081-L3127},
+  urldate = {2024-01-28}
+}
+
+@online{MinIOPythonQuickstart,
+  title = {{{MinIO Python}} -  {{Quickstart Guide}}},
+  url = {https://min.io/docs/minio/linux/developers/python/minio-py.html},
+  urldate = {2024-01-09},
+  file = {/home/agrueneberg/Sync/Zotero/storage/CWF76B67/minio-py.html}
+}
+
+@online{MultiTableTransactionsIceberg,
+  title = {Multi-{{Table Transactions}} in {{Iceberg}}},
+  url = {https://docs.google.com/document/d/1UxXifU8iqP_byaW4E2RuKZx1nobxmAvc5urVcWas1B8/edit},
+  urldate = {2024-01-31}
+}
+
+@inproceedings{nambiarMakingTPCDS2006,
+  title = {The Making of {{TPC-DS}}},
+  booktitle = {Proceedings of the 32nd International Conference on {{Very}} Large Data Bases},
+  author = {Nambiar, Raghunath Othayoth and Poess, Meikel},
+  date = {2006-09-01},
+  series = {{{VLDB}} '06},
+  pages = {1049--1058},
+  publisher = {{VLDB Endowment}},
+  location = {{Seoul, Korea}},
+  abstract = {For the last decade, the research community and the industry have used TPC-D and its successor TPC-H to evaluate performance of decision support technology. Recognizing a paradigm shift in the industry the Transaction Processing Performance Council has developed a new Decision Support benchmark, TPC-DS, expected to be released this year. From an ease of benchmarking perspective it is similar to past benchmarks. However, it adjusts for new technology and new approaches the industry has embarked on in recent years. This paper describes the main characteristics of TPC-DS, explains why some of the key decisions were made and which performance aspects of decision support system it measures.}
+}
+
+@article{nargesianDataLakeManagement2019,
+  title = {Data Lake Management: Challenges and Opportunities},
+  shorttitle = {Data Lake Management},
+  author = {Nargesian, Fatemeh and Zhu, Erkang and Miller, Renée J. and Pu, Ken Q. and Arocena, Patricia C.},
+  date = {2019-08-01},
+  journaltitle = {Proceedings of the VLDB Endowment},
+  shortjournal = {Proc. VLDB Endow.},
+  volume = {12},
+  number = {12},
+  pages = {1986--1989},
+  issn = {2150-8097},
+  doi = {10.14778/3352063.3352116},
+  url = {https://doi.org/10.14778/3352063.3352116},
+  urldate = {2024-01-18},
+  abstract = {The ubiquity of data lakes has created fascinating new challenges for data management research. In this tutorial, we review the state-of-the-art in data management for data lakes. We consider how data lakes are introducing new problems including dataset discovery and how they are changing the requirements for classic problems including data extraction, data cleaning, data integration, data versioning, and metadata management.},
+  file = {/home/agrueneberg/Sync/Zotero/storage/9AB3HTXR/Nargesian et al. - 2019 - Data lake management challenges and opportunities.pdf}
+}
+
+@article{oneilStarSchemaBased,
+  title = {1. {{Star Schema Based}} on {{TPC-H}}},
+  author = {O'Neil, Pat and O'Neil, Betty and Chen, Xuedong},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/T6ER7FFJ/O'Neil et al. - 1. Star Schema Based on TPC-H.pdf}
+}
+
+@article{oneilStarSchemaBenchmark2007,
+  title = {The {{Star Schema Benchmark}} ({{SSB}})},
+  author = {O'Neil, Pat and O'Neil, Betty and Chen, Xuedong},
+  date = {2007},
+  abstract = {The Star Schema benchmark, or SSB, was devised to evaluate database system performance of star schema data warehouse queries. The schema for SSB is based on the TPC-H benchmark, but in a highly modified form. We believe the details of modification to be instructive in answering an important question: given a database schema that is not in star schema form, how can it be transformed to star schema form without loss of important query information? The SSB has been used to measure a number of major commercial database products on Linux to evaluate a new product. We also intend to use SSB to compare star schema query performance of three major commercial database products running on Windows, which will be reported separately.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/EKAKTRJ3/O'Neil et al. - The Star Schema Benchmark (SSB).pdf}
+}
+
+@article{oneilStarSchemaBenchmark2009,
+  title = {The {{Star Schema Benchmark}}},
+  author = {O'Neil, Pat and O'Neil, Betty and Chen, Xuedong},
+  date = {2009-06-05},
+  journaltitle = {Online Publication of Database Generation program.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/PLKSZ8BL/O'Neil et al. - 1. Star Schema Based on TPC-H.pdf}
+}
+
+@online{ParquetFormatSpecification2024,
+  title = {Parquet {{Format Specification}}},
+  date = {2024-01-09T15:52:33Z},
+  origdate = {2014-06-10T07:00:07Z},
+  url = {https://github.com/apache/parquet-format},
+  urldate = {2024-01-09},
+  keywords = {big-data,java,parquet}
+}
+
+@software{peterHyperfine2023,
+  title = {Hyperfine},
+  author = {Peter, David},
+  date = {2023-03},
+  url = {https://github.com/sharkdp/hyperfine},
+  version = {1.16.1}
+}
+
+@article{poessTPCDIFirstIndustry2014,
+  title = {{{TPC-DI}}: The First Industry Benchmark for Data Integration},
+  shorttitle = {{{TPC-DI}}},
+  author = {Poess, Meikel and Rabl, Tilmann and Jacobsen, Hans-Arno and Caufield, Brian},
+  date = {2014-08-01},
+  journaltitle = {Proceedings of the VLDB Endowment},
+  shortjournal = {Proc. VLDB Endow.},
+  volume = {7},
+  number = {13},
+  pages = {1367--1378},
+  issn = {2150-8097},
+  doi = {10.14778/2733004.2733009},
+  url = {https://dl.acm.org/doi/10.14778/2733004.2733009},
+  urldate = {2024-01-08},
+  abstract = {Historically, the process of synchronizing a decision support system with data from operational systems has been referred to as Extract, Transform, Load (ETL) and the tools supporting such process have been referred to as ETL tools. Recently, ETL was replaced by the more comprehensive acronym, data integration (DI). DI describes the process of extracting and combining data from a variety of data source formats, transforming that data into a unified data model representation and loading it into a data store. This is done in the context of a variety of scenarios, such as data acquisition for business intelligence, analytics and data warehousing, but also synchronization of data between operational applications, data migrations and conversions, master data management, enterprise data sharing and delivery of data services in a service-oriented architecture context, amongst others. With these scenarios relying on up-to-date information it is critical to implement a highly performing, scalable and easy to maintain data integration system. This is especially important as the complexity, variety and volume of data is constantly increasing and performance of data integration systems is becoming very critical. Despite the significance of having a highly performing DI system, there has been no industry standard for measuring and comparing their performance. The TPC, acknowledging this void, has released TPC-DI, an innovative benchmark for data integration. This paper motivates the reasons behind its development, describes its main characteristics including workload, run rules, metric, and explains key decisions.},
+  file = {/home/agrueneberg/Sync/Zotero/storage/L3T3MI9L/Poess et al. - 2014 - TPC-DI the first industry benchmark for data inte.pdf}
+}
+
+@inproceedings{poessTPCDSTakingDecision2002,
+  title = {{{TPC-DS}}, Taking Decision Support Benchmarking to the next Level},
+  booktitle = {Proceedings of the 2002 {{ACM SIGMOD}} International Conference on {{Management}} of Data},
+  author = {Poess, Meikel and Smith, Bryan and Kollar, Lubor and Larson, Paul},
+  date = {2002-06-03},
+  series = {{{SIGMOD}} '02},
+  pages = {582--587},
+  publisher = {{Association for Computing Machinery}},
+  location = {{New York, NY, USA}},
+  doi = {10.1145/564691.564759},
+  url = {https://doi.org/10.1145/564691.564759},
+  urldate = {2024-01-08},
+  abstract = {TPC-DS is a new decision support benchmark currently under development by the Transaction Processing Performance Council (TPC). This paper provides a brief overview of the new benchmark. The benchmark models the decision support functions of a retail product supplier, including data loading, multiple types of queries and data maintenance. The database consists of multiple snowflake schemas with shared dimension tables; data is skewed; and the query set is large. Overall, the benchmark is considerably more realistic than previous decision support benchmarks.},
+  isbn = {978-1-58113-497-1},
+  keywords = {benchmark,data warehouse,decision support,performance evaluation,TPC},
+  file = {/home/agrueneberg/Sync/Zotero/storage/46L2NMW4/Poess et al. - 2002 - TPC-DS, taking decision support benchmarking to th.pdf}
+}
+
+@inproceedings{poessWhyYouShould2007,
+  title = {Why You Should Run {{TPC-DS}}: A Workload Analysis},
+  shorttitle = {Why You Should Run {{TPC-DS}}},
+  booktitle = {Proceedings of the 33rd International Conference on {{Very}} Large Data Bases},
+  author = {Poess, Meikel and Nambiar, Raghunath Othayoth and Walrath, David},
+  date = {2007-09-23},
+  series = {{{VLDB}} '07},
+  pages = {1138--1149},
+  publisher = {{VLDB Endowment}},
+  location = {{Vienna, Austria}},
+  abstract = {The Transaction Processing Performance Council (TPC) is completing development of TPC-DS, a new generation industry standard decision support benchmark. The TPC-DS benchmark, first introduced in the "The Making of TPC-DS" [9] paper at the 32nd International Conference on Very Large Data Bases (VLDB), has now entered the TPC's "Formal Review" phase for new benchmarks; companies and researchers alike can now download the draft benchmark specification and tools for evaluation. The first paper [9] gave an overview of the TPC-DS data model, workload model, and execution rules. This paper details the characteristics of different phases of the workload, namely: database load, query workload and data maintenance; and also their impact to the benchmark's performance metric. As with prior TPC benchmarks, this workload will be widely used by vendors to demonstrate their capabilities to support complex decision support systems, by customers as a key factor in purchasing servers and software, and by the database community for research and development of optimization techniques.},
+  isbn = {978-1-59593-649-3}
+}
+
+@online{Presto,
+  title = {Presto},
+  url = {http://prestodb.io/},
+  urldate = {2023-11-15},
+  abstract = {Run interactive ad-hoc SQL queries at sub-second performance. Query data lakes, lakehouses, or databases reliably at massive scale.},
+  langid = {american},
+  organization = {{Presto}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/XEDYLHHF/prestodb.io.html}
+}
+
+@online{ProjectNessie,
+  title = {Project {{Nessie}}},
+  url = {https://projectnessie.org/},
+  urldate = {2024-01-22}
+}
+
+@online{ProtocolBuffers,
+  title = {Protocol {{Buffers}}},
+  url = {https://protobuf.dev/},
+  urldate = {2023-11-15},
+  abstract = {Protocol Buffers are language-neutral, platform-neutral extensible mechanisms for serializing structured data.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/KKESVMIU/protobuf.dev.html}
+}
+
+@online{PythonApacheArrow,
+  title = {Python — {{Apache Arrow}} V14.0.2},
+  url = {https://arrow.apache.org/docs/python/index.html},
+  urldate = {2023-12-22},
+  file = {/home/agrueneberg/Sync/Zotero/storage/XT6ZKCFW/index.html}
+}
+
+@manual{rcoreteamLanguageEnvironmentStatistical2023,
+  type = {manual},
+  title = {R: {{A}} Language and Environment for Statistical Computing},
+  author = {{R Core Team}},
+  date = {2023},
+  publisher = {{R Foundation for Statistical Computing}},
+  location = {{Vienna, Austria}},
+  url = {https://www.R-project.org/}
+}
+
+@online{RearchitectingTrinoDevelopment,
+  title = {Re-Architecting {{Trino}}: {{The}} Development of Fault-Tolerant Execution},
+  shorttitle = {Re-Architecting {{Trino}}},
+  url = {https://www.starburst.io/blog/trino-development-fault-tolerant-execution/},
+  urldate = {2024-01-23},
+  abstract = {A novel architecture based on fault-tolerant execution that stop and restart without needing to reproduce any previous results.},
+  langid = {american},
+  organization = {{Starburst}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/Z4FG3KBS/trino-development-fault-tolerant-execution.html}
+}
+
+@software{RecapbuildPymetastore2023,
+  title = {Recap-Build/Pymetastore},
+  date = {2023-09-02T17:26:14Z},
+  origdate = {2023-06-18T16:15:57Z},
+  url = {https://github.com/recap-build/pymetastore},
+  urldate = {2024-01-22},
+  organization = {{recap-build}},
+  keywords = {data-engineering,hcatalog,hive,hive-metastore,python,thrift}
+}
+
+@online{s3cmd,
+  title = {S3cmd},
+  url = {https://s3tools.org/s3cmd},
+  urldate = {2024-01-28}
+}
+
+@online{S3GetObject,
+  title = {S3 {{API}}: {{GetObject}}},
+  url = {https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html},
+  urldate = {2024-01-21}
+}
+
+@online{S3HeadObject,
+  title = {S3 {{API}}: {{HeadObject}}},
+  url = {https://docs.aws.amazon.com/AmazonS3/latest/API/API_HeadObject.html},
+  urldate = {2024-01-21}
+}
+
+@online{S3ListObjectsV2,
+  title = {S3 {{API}}: {{ListObjectsV2}}},
+  url = {https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectsV2.html},
+  urldate = {2024-01-09}
+}
+
+@online{S3Prefixes,
+  title = {S3 {{User Guide}}: {{Organizing}} Objects Using Prefixes},
+  url = {https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html},
+  urldate = {2024-01-28}
+}
+
+@online{S3RESTAPI,
+  title = {S3 {{API}}: {{REST API}}},
+  url = {https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html},
+  urldate = {2024-01-21}
+}
+
+@inproceedings{samwelF1QueryDeclarative2018,
+  title = {F1 Query: {{Declarative}} Querying at Scale},
+  author = {Samwel, Bart and Cieslewicz, John and Handy, Ben and Govig, Jason and Venetis, Petros and Yang, Chanjun and Peters, Keith and Shute, Jeff and Tenedorio, Daniel and Apte, Himani and Weigel, Felix and Wilhite, David G and Yang, Jiacheng and Xu, Jun and Li, Jiexing and Yuan, Zhan and Chasseur, Craig and Zeng, Qiang and Rae, Ian and Biyani, Anurag and Harn, Andrew and Xia, Yang and Gubichev, Andrey and El-Helw, Amr and Erling, Orri and Yan, Allen and Yang, Mohan and Wei, Yiqun and Do, Thanh and Zheng, Colin and Graefe, Goetz and Sardashti, Somayeh and Aly, Ahmed and Agrawal, Divy and Gupta, Ashish and Venkataraman, Shivakumar},
+  date = {2018},
+  pages = {1835--1848},
+  url = {http://www.vldb.org/pvldb/vol11/p1835-samwel.pdf},
+  file = {/home/agrueneberg/Sync/Zotero/storage/JEWUVXI6/Samwel et al. - 2018 - F1 query Declarative querying at scale.pdf}
+}
+
+@report{SeaweedFSArchitecture2021,
+  type = {White Paper},
+  title = {{{SeaweedFS Architecture}}},
+  date = {2021-08-15},
+  url = {https://raw.githubusercontent.com/wiki/seaweedfs/seaweedfs/SeaweedFS_Architecture.pdf},
+  urldate = {2024-01-13},
+  file = {/home/agrueneberg/Sync/Zotero/storage/Y2GBVRUP/SeaweedFS_Architecture.pdf}
+}
+
+@online{SequenceFile,
+  title = {{{SequenceFile}}},
+  url = {https://cwiki.apache.org/confluence/display/HADOOP2/SequenceFile},
+  urldate = {2023-11-15},
+  organization = {{SequenceFile}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/ZRC3NI8S/SequenceFile.html}
+}
+
+@inproceedings{sethiPrestoSQLEverything2019,
+  title = {Presto: {{SQL}} on {{Everything}}},
+  shorttitle = {Presto},
+  booktitle = {2019 {{IEEE}} 35th {{International Conference}} on {{Data Engineering}} ({{ICDE}})},
+  author = {Sethi, Raghav and Traverso, Martin and Sundstrom, Dain and Phillips, David and Xie, Wenlei and Sun, Yutian and Yegitbasi, Nezih and Jin, Haozhun and Hwang, Eric and Shingte, Nileema and Berner, Christopher},
+  date = {2019-04},
+  pages = {1802--1813},
+  publisher = {{IEEE}},
+  location = {{Macao, Macao}},
+  doi = {10.1109/ICDE.2019.00196},
+  url = {https://ieeexplore.ieee.org/document/8731547/},
+  urldate = {2023-09-19},
+  abstract = {Presto is an open source distributed query engine that supports much of the SQL analytics workload at Facebook. Presto is designed to be adaptive, flexible, and extensible. It supports a wide variety of use cases with diverse characteristics. These range from user-facing reporting applications with subsecond latency requirements to multi-hour ETL jobs that aggregate or join terabytes of data. Presto’s Connector API allows plugins to provide a high performance I/O interface to dozens of data sources, including Hadoop data warehouses, RDBMSs, NoSQL systems, and stream processing systems. In this paper, we outline a selection of use cases that Presto supports at Facebook. We then describe its architecture and implementation, and call out features and performance optimizations that enable it to support these use cases. Finally, we present performance results that demonstrate the impact of our main design decisions.},
+  eventtitle = {2019 {{IEEE}} 35th {{International Conference}} on {{Data Engineering}} ({{ICDE}})},
+  isbn = {978-1-5386-7474-1},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/IGXZBWFA/Sethi et al. - 2019 - Presto SQL on Everything.pdf}
+}
+
+@online{shanleyOriginsTPCFirst1998,
+  title = {Origins of the {{TPC}} and the First 10 Years},
+  author = {Shanley, Kim},
+  date = {1998-02},
+  url = {https://www.tpc.org/information/about/history5.asp},
+  urldate = {2024-01-08},
+  file = {/home/agrueneberg/Sync/Zotero/storage/VBGCL22Q/history5.html}
+}
+
+@software{sitnikovVlsiKsar2024,
+  title = {Vlsi/Ksar},
+  author = {Sitnikov, Vladimir},
+  date = {2024-01-03T06:25:13Z},
+  origdate = {2013-04-27T19:42:09Z},
+  url = {https://github.com/vlsi/ksar},
+  urldate = {2024-01-08},
+  keywords = {sar}
+}
+
+@online{SPARK13477UserfacingCatalog,
+  title = {[{{SPARK-13477}}] {{User-facing}} Catalog {{API}}},
+  url = {https://issues.apache.org/jira/browse/SPARK-13477?jql=project%20%3D%20SPARK%20AND%20fixVersion%20%3D%202.0.0%20AND%20text%20~%20%22catalog%22},
+  urldate = {2024-01-23}
+}
+
+@online{SPARK24940CoalesceRepartition,
+  title = {[{{SPARK-24940}}] {{Coalesce}} and {{Repartition Hint}} for {{SQL Queries}}},
+  url = {https://issues.apache.org/jira/browse/SPARK-24940},
+  urldate = {2024-01-09},
+  file = {/home/agrueneberg/Sync/Zotero/storage/7XGUG9T9/SPARK-24940.html}
+}
+
+@online{SPARK31412NewAdaptive,
+  title = {[{{SPARK-31412}}] {{New Adaptive Query Execution}} in {{Spark SQL}}},
+  url = {https://issues.apache.org/jira/browse/SPARK-31412},
+  urldate = {2024-01-23}
+}
+
+@online{SPARK9850AdaptiveExecution,
+  title = {[{{SPARK-9850}}] {{Adaptive}} Execution in {{Spark}}},
+  url = {https://issues.apache.org/jira/browse/SPARK-9850},
+  urldate = {2024-01-23}
+}
+
+@online{SparkCloudIntegration,
+  title = {Spark {{Documentation}}: {{Integration}} with {{Cloud Infrastructures}}},
+  url = {https://spark.apache.org/docs/3.4.0/cloud-integration.html},
+  urldate = {2024-01-28}
+}
+
+@online{SparkDocumentationCACHE,
+  title = {Spark {{Documentation}}: {{CACHE TABLE}}},
+  url = {https://spark.apache.org/docs/latest/sql-ref-syntax-aux-cache-cache-table.html},
+  urldate = {2024-01-19}
+}
+
+@online{SparkDocumentationHive,
+  title = {Spark {{Documentation}}: {{Hive Tables}}},
+  url = {https://spark.apache.org/docs/3.4.0/sql-data-sources-hive-tables.html},
+  urldate = {2024-01-28}
+}
+
+@online{SparkMesos,
+  title = {Spark {{Documentation}}: {{Running Spark}} on {{Mesos}}},
+  url = {https://spark.apache.org/docs/3.4.0/running-on-mesos.html},
+  urldate = {2024-01-28}
+}
+
+@online{SparkParquet,
+  title = {Spark {{Documentation}}: {{Parquet Files}}},
+  url = {https://spark.apache.org/docs/3.4.0/sql-data-sources-parquet.html},
+  urldate = {2024-01-28}
+}
+
+@online{SparkRelease100,
+  title = {Spark {{Release}} 1.0.0},
+  url = {https://spark.apache.org/releases/spark-release-1-0-0.html},
+  urldate = {2024-01-23}
+}
+
+@online{SparkRelease130,
+  title = {Spark {{Release}} 1.3.0},
+  url = {https://spark.apache.org/releases/spark-release-1-3-0.html},
+  urldate = {2024-01-23}
+}
+
+@online{SparkRelease160,
+  title = {Spark {{Release}} 1.6.0},
+  url = {https://spark.apache.org/releases/spark-release-1-6-0.html},
+  urldate = {2024-01-23}
+}
+
+@online{SparkRelease300,
+  title = {Spark {{Release}} 3.0.0},
+  url = {https://spark.apache.org/releases/spark-release-3-0-0.html},
+  urldate = {2024-01-23}
+}
+
+@online{SQLite,
+  title = {{{SQLite}}},
+  url = {https://www.sqlite.org/},
+  urldate = {2023-07-26},
+  organization = {{SQLIte}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/QAX6TG7X/index.html}
+}
+
+@inproceedings{stonebrakerCstoreColumnorientedDBMS2005,
+  title = {C-Store: A Column-Oriented {{DBMS}}},
+  shorttitle = {C-Store},
+  booktitle = {Proceedings of the 31st International Conference on {{Very}} Large Data Bases},
+  author = {Stonebraker, Mike and Abadi, Daniel J. and Batkin, Adam and Chen, Xuedong and Cherniack, Mitch and Ferreira, Miguel and Lau, Edmond and Lin, Amerson and Madden, Sam and O'Neil, Elizabeth and O'Neil, Pat and Rasin, Alex and Tran, Nga and Zdonik, Stan},
+  date = {2005-08-30},
+  series = {{{VLDB}} '05},
+  pages = {553--564},
+  publisher = {{VLDB Endowment}},
+  location = {{Trondheim, Norway}},
+  abstract = {This paper presents the design of a read-optimized relational DBMS that contrasts sharply with most current systems, which are write-optimized. Among the many differences in its design are: storage of data by column rather than by row, careful coding and packing of objects into storage including main memory during query processing, storing an overlapping collection of column-oriented projections, rather than the current fare of tables and indexes, a non-traditional implementation of transactions which includes high availability and snapshot isolation for read-only transactions, and the extensive use of bitmap indexes to complement B-tree structures.We present preliminary performance data on a subset of TPC-H and show that the system we are building, C-Store, is substantially faster than popular commercial products. Hence, the architecture looks very encouraging.},
+  isbn = {978-1-59593-154-2},
+  file = {/home/agrueneberg/Sync/Zotero/storage/A9WYRIRA/Stonebraker et al. - 2005 - C-store a column-oriented DBMS.pdf}
+}
+
+@article{sunPrestoDecadeSQL2023,
+  title = {Presto: {{A Decade}} of {{SQL Analytics}} at {{Meta}}},
+  shorttitle = {Presto},
+  author = {Sun, Yutian and Meehan, Tim and Schlussel, Rebecca and Xie, Wenlei and Basmanova, Masha and Erling, Orri and Rosa, Andrii and Fan, Shixuan and Zhong, Rongrong and Thirupathi, Arun and Collooru, Nikhil and Wang, Ke and Agarwal, Sameer and Gupta, Arjun and Logothetis, Dionysios and Xirogiannopoulos, Kostas and Dutta, Amit and Gajjala, Varun and Jain, Rohit and Palakuzhy, Ajay and Pandian, Prithvi and Pershin, Sergey and Saikia, Abhisek and Shankhdhar, Pranjal and Somanchi, Neerad and Tailor, Swapnil and Tan, Jialiang and Viswanadha, Sreeni and Wen, Zac and Chattopadhyay, Biswapesh and Fan, Bin and Majeti, Deepak and Pandit, Aditi},
+  date = {2023-06-20},
+  journaltitle = {Proceedings of the ACM on Management of Data},
+  shortjournal = {Proc. ACM Manag. Data},
+  volume = {1},
+  number = {2},
+  pages = {189:1--189:25},
+  doi = {10.1145/3589769},
+  url = {https://doi.org/10.1145/3589769},
+  urldate = {2024-01-05},
+  abstract = {Presto is an open-source distributed SQL query engine that supports analytics workloads involving multiple exabyte-scale data sources. Presto is used for low-latency interactive use cases as well as long-running ETL jobs at Meta. It was originally launched at Meta in 2013 and donated to the Linux Foundation in 2019. Over the last ten years, upholding query latency and scalability with the hyper growth of data volume at Meta as well as new SQL analytics requirements have raised impressive challenges for Presto. A top priority has been ensuring query reliability does not regress with the shift towards smaller, more elastic container allocation, which requires queries to run with substantially smaller memory headroom and can be preempted at any time. Additionally, new demands from machine learning, privacy, and graph analytics have driven Presto maintainers to think beyond traditional data analytics. In this paper, we discuss several successful evolutions in recent years that have improved Presto latency as well as scalability by several orders of magnitude in production at Meta. Some of the notable ones are hierarchical caching, native vectorized execution engines, materialized views, and Presto on Spark. With these new capabilities, we have deprecated or are in the process of deprecating various legacy query engines so that Presto becomes the single piece to serve interactive, ad-hoc, ETL, and graph processing workloads for the entire data warehouse.},
+  keywords = {data analytics,data warehouse,distributed database,etl,olap,presto,sql},
+  file = {/home/agrueneberg/Sync/Zotero/storage/DW4AF6SV/Sun et al. - 2023 - Presto A Decade of SQL Analytics at Meta.pdf}
+}
+
+@article{sunSkippingorientedPartitioningColumnar2016,
+  title = {Skipping-Oriented Partitioning for Columnar Layouts},
+  author = {Sun, Liwen and Franklin, Michael J. and Wang, Jiannan and Wu, Eugene},
+  date = {2016-11-01},
+  journaltitle = {Proceedings of the VLDB Endowment},
+  shortjournal = {Proc. VLDB Endow.},
+  volume = {10},
+  number = {4},
+  pages = {421--432},
+  issn = {2150-8097},
+  doi = {10.14778/3025111.3025123},
+  url = {https://doi.org/10.14778/3025111.3025123},
+  urldate = {2024-01-13},
+  abstract = {As data volumes continue to grow, modern database systems increasingly rely on data skipping mechanisms to improve performance by avoiding access to irrelevant data. Recent work [39] proposed a fine-grained partitioning scheme that was shown to improve the opportunities for data skipping in row-oriented systems. Modern analytics and big data systems increasingly adopt columnar storage schemes, and in such systems, a row-based approach misses important opportunities for further improving data skipping. The flexibility of column-oriented organizations, however, comes with the additional cost of tuple reconstruction. In this paper, we develop Generalized Skipping-Oriented Partitioning (GSOP), a novel hybrid data skipping framework that takes into account these row-based and column-based tradeoffs. In contrast to previous column-oriented physical design work, GSOP considers the tradeoffs between horizontal data skipping and vertical partitioning jointly. Our experiments using two public benchmarks and a real-world workload show that GSOP can significantly reduce the amount of data scanned and improve end-to-end query response times over the state-of-the- art techniques.},
+  file = {/home/agrueneberg/Sync/Zotero/storage/KILQSYRU/Sun et al. - 2016 - Skipping-oriented partitioning for columnar layout.pdf}
+}
+
+@online{Sysstat,
+  title = {Sysstat},
+  url = {https://sysstat.github.io/},
+  urldate = {2024-01-08},
+  file = {/home/agrueneberg/Sync/Zotero/storage/TBVIYJDJ/sysstat.github.io.html}
+}
+
+@inproceedings{ta-shmaExtensibleDataSkipping2020,
+  title = {Extensible {{Data Skipping}}},
+  booktitle = {2020 {{IEEE International Conference}} on {{Big Data}} ({{Big Data}})},
+  author = {Ta-Shma, Paula and Khazma, Guy and Lushi, Gal and Feder, Oshrit},
+  date = {2020-12},
+  pages = {372--382},
+  doi = {10.1109/BigData50022.2020.9377740},
+  url = {https://ieeexplore.ieee.org/document/9377740},
+  urldate = {2024-01-18},
+  abstract = {Data skipping reduces I/O for SQL queries by skipping over irrelevant data objects (files) based on their metadata. We extend this notion by allowing developers to define their own data s kipping metadata types and indexes using a flexible A PI. Our framework i s t he first to natively support data skipping for arbitrary data types (e.g. geospatial, logs) and queries with User Defined Functions ( UDFs). We integrated our framework with Apache Spark and it is now deployed across multiple products/services at IBM. We present our extensible data skipping APIs, discuss index design, and implement various metadata indexes, requiring only around 30 lines of additional code per index. In particular we implement data skipping for a third party library with geospatial UDFs and demonstrate speedups of two orders of magnitude. Our centralized metadata approach provides a x3.6 speed up even when compared to queries which are rewritten to exploit Parquet min/max metadata. We demonstrate that extensible data skipping is applicable to broad class of applications, where user defined indexes achieve significant speedups and cost savings with very low development cost.},
+  eventtitle = {2020 {{IEEE International Conference}} on {{Big Data}} ({{Big Data}})},
+  file = {/home/agrueneberg/Sync/Zotero/storage/V4FKN3PN/Ta-Shma et al. - 2020 - Extensible Data Skipping.pdf;/home/agrueneberg/Sync/Zotero/storage/7BRYUIEM/9377740.html}
+}
+
+@article{tanChoosingCloudDBMS2019,
+  title = {Choosing a Cloud {{DBMS}}: Architectures and Tradeoffs},
+  shorttitle = {Choosing a Cloud {{DBMS}}},
+  author = {Tan, Junjay and Ghanem, Thanaa and Perron, Matthew and Yu, Xiangyao and Stonebraker, Michael and DeWitt, David and Serafini, Marco and Aboulnaga, Ashraf and Kraska, Tim},
+  date = {2019-08},
+  journaltitle = {Proceedings of the VLDB Endowment},
+  shortjournal = {Proc. VLDB Endow.},
+  volume = {12},
+  number = {12},
+  pages = {2170--2182},
+  issn = {2150-8097},
+  doi = {10.14778/3352063.3352133},
+  url = {https://dl.acm.org/doi/10.14778/3352063.3352133},
+  urldate = {2023-11-09},
+  abstract = {As analytic (OLAP) applications move to the cloud, DBMSs have shifted from employing a pure shared-nothing design with locally attached storage to a hybrid design that combines the use of shared-storage (e.g., AWS S3) with the use of shared-nothing query execution mechanisms. This paper sheds light on the resulting tradeoffs, which have not been properly identified in previous work. To this end, it evaluates the TPC-H benchmark across a variety of DBMS offerings running in a cloud environment (AWS) on fast 10Gb+ networks, specifically database-as-a-service offerings (Redshift, Athena), query engines (Presto, Hive), and a traditional cloud agnostic OLAP database (Vertica). While these comparisons cannot be apples-to-apples in all cases due to cloud configuration restrictions, we nonetheless identify patterns and design choices that are advantageous. These include prioritizing low-cost object stores like S3 for data storage, using system agnostic yet still performant columnar formats like ORC that allow easy switching to other systems for different workloads, and making features that benefit subsequent runs like query precompilation and caching remote data to faster storage optional rather than required because they disadvantage ad hoc queries.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/ID37T7VW/Tan et al. - 2019 - Choosing a cloud DBMS architectures and tradeoffs.pdf}
+}
+
+@article{tardioNewBigData2020,
+  title = {A {{New Big Data Benchmark}} for {{OLAP Cube Design Using Data Pre-Aggregation Techniques}}},
+  author = {Tardío, Roberto and Maté, Alejandro and Trujillo, Juan},
+  date = {2020-12-04},
+  journaltitle = {Applied Sciences},
+  shortjournal = {Applied Sciences},
+  volume = {10},
+  number = {23},
+  pages = {8674},
+  issn = {2076-3417},
+  doi = {10.3390/app10238674},
+  url = {https://www.mdpi.com/2076-3417/10/23/8674},
+  urldate = {2023-07-30},
+  abstract = {In recent years, several new technologies have enabled OLAP processing over Big Data sources. Among these technologies, we highlight those that allow data pre-aggregation because of their demonstrated performance in data querying. This is the case of Apache Kylin, a Hadoop based technology that supports sub-second queries over fact tables with billions of rows combined with ultra high cardinality dimensions. However, taking advantage of data pre-aggregation techniques to designing analytic models for Big Data OLAP is not a trivial task. It requires very advanced knowledge of the underlying technologies and user querying patterns. A wrong design of the OLAP cube alters significantly several key performance metrics, including: (i) the analytic capabilities of the cube (time and ability to provide an answer to a query), (ii) size of the OLAP cube, and (iii) time required to build the OLAP cube. Therefore, in this paper we (i) propose a benchmark to aid Big Data OLAP designers to choose the most suitable cube design for their goals, (ii) we identify and describe the main requirements and trade-offs for effectively designing a Big Data OLAP cube taking advantage of data pre-aggregation techniques, and (iii) we validate our benchmark in a case study.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/SJ2BKUFY/Tardío et al. - 2020 - A New Big Data Benchmark for OLAP Cube Design Usin.pdf}
+}
+
+@inproceedings{thusooHivePetabyteScale2010,
+  title = {Hive - a Petabyte Scale Data Warehouse Using {{Hadoop}}},
+  booktitle = {2010 {{IEEE}} 26th {{International Conference}} on {{Data Engineering}} ({{ICDE}} 2010)},
+  author = {Thusoo, Ashish and Sarma, Joydeep Sen and Jain, Namit and Shao, Zheng and Chakka, Prasad and Zhang, Ning and Antony, Suresh and Liu, Hao and Murthy, Raghotham},
+  date = {2010},
+  pages = {996--1005},
+  publisher = {{IEEE}},
+  location = {{Long Beach, CA, USA}},
+  doi = {10.1109/ICDE.2010.5447738},
+  url = {http://ieeexplore.ieee.org/document/5447738/},
+  urldate = {2023-08-28},
+  abstract = {The size of data sets being collected and analyzed in the industry for business intelligence is growing rapidly, making traditional warehousing solutions prohibitively expensive. Hadoop [1] is a popular open-source map-reduce implementation which is being used in companies like Yahoo, Facebook etc. to store and process extremely large data sets on commodity hardware. However, the map-reduce programming model is very low level and requires developers to write custom programs which are hard to maintain and reuse. In this paper, we present Hive, an open-source data warehousing solution built on top of Hadoop. Hive supports queries expressed in a SQL-like declarative language - HiveQL, which are compiled into mapreduce jobs that are executed using Hadoop. In addition, HiveQL enables users to plug in custom map-reduce scripts into queries. The language includes a type system with support for tables containing primitive types, collections like arrays and maps, and nested compositions of the same. The underlying IO libraries can be extended to query data in custom formats. Hive also includes a system catalog - Metastore – that contains schemas and statistics, which are useful in data exploration, query optimization and query compilation. In Facebook, the Hive warehouse contains tens of thousands of tables and stores over 700TB of data and is being used extensively for both reporting and ad-hoc analyses by more than 200 users per month.},
+  eventtitle = {2010 {{IEEE}} 26th {{International Conference}} on {{Data Engineering}} ({{ICDE}} 2010)},
+  isbn = {978-1-4244-5445-7},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/HF595JPL/Thusoo et al. - 2010 - Hive - a petabyte scale data warehouse using Hadoo.pdf}
+}
+
+@article{thusooHiveWarehousingSolution2009,
+  title = {Hive: A Warehousing Solution over a Map-Reduce Framework},
+  shorttitle = {Hive},
+  author = {Thusoo, Ashish and Sarma, Joydeep Sen and Jain, Namit and Shao, Zheng and Chakka, Prasad and Anthony, Suresh and Liu, Hao and Wyckoff, Pete and Murthy, Raghotham},
+  date = {2009-08},
+  journaltitle = {Proceedings of the VLDB Endowment},
+  shortjournal = {Proc. VLDB Endow.},
+  volume = {2},
+  number = {2},
+  pages = {1626--1629},
+  issn = {2150-8097},
+  doi = {10.14778/1687553.1687609},
+  url = {https://dl.acm.org/doi/10.14778/1687553.1687609},
+  urldate = {2023-11-15},
+  abstract = {The size of data sets being collected and analyzed in the industry for business intelligence is growing rapidly, making traditional warehousing solutions prohibitively expensive.               Hadoop               [3] is a popular open-source map-reduce implementation which is being used as an alternative to store and process extremely large data sets on commodity hardware. However, the map-reduce programming model is very low level and requires developers to write custom programs which are hard to maintain and reuse.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/F2U6BLUZ/Thusoo et al. - 2009 - Hive a warehousing solution over a map-reduce fra.pdf}
+}
+
+@standard{TPCBenchmarkDS,
+  title = {{{TPC Benchmark DS}} - {{Standard Specification}}, {{Version}} 3.2.0},
+  file = {/home/agrueneberg/Sync/Zotero/storage/5SR5QNB8/TPC-DS_v3.2.0.pdf}
+}
+
+@standard{TPCBenchmarkStandard,
+  title = {{{TPC Benchmark H}} - {{Standard Specification}}, {{Revision}} 3.0.1},
+  file = {/home/agrueneberg/Sync/Zotero/storage/CBJYY3ZF/TPC-H_v3.0.1.pdf}
+}
+
+@online{TPCDI,
+  title = {{{TPC-DI}}},
+  url = {https://www.tpc.org/tpcdi/},
+  urldate = {2023-11-15},
+  organization = {{TPC-DI}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/8VJ9C6E5/tpcdi.html}
+}
+
+@online{TPCDS,
+  title = {{{TPC-DS}}},
+  url = {https://www.tpc.org/tpcds/},
+  urldate = {2023-11-15},
+  organization = {{TPC-DS}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/3RV4FPFH/tpcds.html}
+}
+
+@online{TPCH,
+  title = {{{TPC-H}}},
+  url = {https://www.tpc.org/tpch/},
+  urldate = {2023-11-15},
+  organization = {{TPC-H}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/RAB5R769/TPC-H.pdf;/home/agrueneberg/Sync/Zotero/storage/YSRK68UX/tpch.html}
+}
+
+@online{Trino,
+  title = {Trino},
+  url = {https://trino.io/},
+  urldate = {2023-11-15},
+  abstract = {Trino is a high performance, distributed SQL query engine for big data.},
+  organization = {{Trino}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/LGJ4KN2E/trino.io.html}
+}
+
+@online{TrinoBlogWe,
+  title = {Trino {{Blog}}: {{We}}'re Rebranding {{PrestoSQL}} as {{Trino}}},
+  url = {https://trino.io/blog/2020/12/27/announcing-trino},
+  urldate = {2024-01-22}
+}
+
+@online{TrinoCustomPlugin,
+  title = {Trino {{Documentation}}: {{Deploying}} a Custom Plugin},
+  url = {https://trino.io/docs/430/develop/spi-overview.html#deploying-a-custom-plugin},
+  urldate = {2024-01-28}
+}
+
+@online{TrinodbTrinoGitHub,
+  title = {Trinodb/Trino on {{GitHub}}: {{Highlighted Source Code}} of Plugin/Trino-Tpch/Src/Main/Java/Io/Trino/Plugin/Tpch/{{TpchConnectorFactory}}.Java},
+  url = {https://github.com/trinodb/trino/blob/6021f331b4e50296bfc07aaafe937e05040418b5/plugin/trino-tpch/src/main/java/io/trino/plugin/tpch/TpchConnectorFactory.java#L56},
+  urldate = {2024-01-09},
+  langid = {english},
+  organization = {{GitHub}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/RGB373FW/TpchConnectorFactory.html}
+}
+
+@online{TrinodbTrinoGitHuba,
+  title = {Trinodb/Trino on {{GitHub}}: {{Highlighted Source Code}} of Plugin/Trino-Iceberg/Src/Main/Java/Io/Trino/Plugin/Iceberg/{{IcebergSplit}}.Java},
+  url = {https://github.com/trinodb/trino/blob/1706df06e79c7b2ed9dc865ef46937124e471f06/plugin/trino-iceberg/src/main/java/io/trino/plugin/iceberg/IcebergSplit.java#L49-L71},
+  urldate = {2024-01-09},
+  langid = {english},
+  organization = {{GitHub}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/8MZJ8LQ8/IcebergSplit.html}
+}
+
+@online{TrinodbTrinoGitHubb,
+  title = {Trinodb/Trino on {{GitHub}}: {{Issue}} \#9018 - {{Populate}} Split\_offsets in {{Iceberg}} Metadata},
+  url = {https://github.com/trinodb/trino/issues/9018},
+  urldate = {2024-01-09},
+  langid = {english},
+  organization = {{GitHub}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/NMM92ZM8/9018.html}
+}
+
+@online{TrinodbTrinoGitHubc,
+  title = {Trinodb/Trino on {{GitHub}}: {{Highlighted Source Code}} of Lib/Trino-Parquet/Src/Main/Java/Io/Trino/Parquet/Reader/{{MetadataReader}}.Java},
+  url = {https://github.com/trinodb/trino/blob/875fe1b8a891e3293f0baf48cb4eea7b815b8b3d/lib/trino-parquet/src/main/java/io/trino/parquet/reader/MetadataReader.java#L77},
+  urldate = {2024-01-09},
+  langid = {english},
+  organization = {{GitHub}}
+}
+
+@online{TrinodbTrinoGitHubd,
+  title = {Trinodb/Trino on {{GitHub}}: {{Comment}} on {{Issue}} \#9018 - {{Populate}} Split\_offsets in {{Iceberg}} Metadata},
+  url = {https://github.com/trinodb/trino/issues/9018#issuecomment-1753112141},
+  urldate = {2024-01-09},
+  langid = {english},
+  organization = {{GitHub}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/VA3MSLS9/9018.html}
+}
+
+@online{TrinodbTrinoGitHube,
+  title = {Trinodb/Trino on {{GitHub}}: {{Issue}} \#17063 - {{Use Delta Deletion Vectors}} for Row-Level Deletes},
+  url = {https://github.com/trinodb/trino/issues/17063},
+  urldate = {2024-01-17}
+}
+
+@online{TrinodbTrinoGitHubf,
+  title = {Trinodb/Trino on {{GitHub}}: {{Issue}} \#15921 - {{Decouple Trino}} from {{Hadoop}} and {{Hive}} Codebases},
+  url = {https://github.com/trinodb/trino/issues/15921},
+  urldate = {2024-01-18},
+  langid = {english},
+  organization = {{GitHub}},
+  file = {/home/agrueneberg/Sync/Zotero/storage/KBEI82WQ/15921.html}
+}
+
+@online{TrinodbTrinoGitHubg,
+  title = {Trinodb/Trino on {{GitHub}}: {{Issue}} \#5517 - Hive\_storage\_format Session Property Is Not Respected},
+  url = {https://github.com/trinodb/trino/issues/5517},
+  urldate = {2024-01-18}
+}
+
+@online{TrinodbTrinoGitHubh,
+  title = {Trinodb/Trino on {{GitHub}}: {{Source Code}} of Plugin/Trino-Iceberg/Src/Main/Java/Io/Trino/Plugin/Iceberg/{{IcebergSplit}}.Java},
+  url = {https://github.com/trinodb/trino/blob/1706df06e79c7b2ed9dc865ef46937124e471f06/plugin/trino-iceberg/src/main/java/io/trino/plugin/iceberg/IcebergSplit.java},
+  urldate = {2024-01-09},
+  langid = {english},
+  organization = {{GitHub}}
+}
+
+@online{TrinodbTrinoGitHubi,
+  title = {Trinodb/Trino on {{GitHub}}: {{Source Code}} of Plugin/Trino-Delta-Lake/Src/Main/Java/Io/Trino/Plugin/Deltalake/{{DeltaLakeSessionProperties}}.Java},
+  url = {https://github.com/trinodb/trino/blob/7e708ba2e79046b13bd833ec054deb9545961c58/plugin/trino-delta-lake/src/main/java/io/trino/plugin/deltalake/DeltaLakeSessionProperties.java},
+  urldate = {2024-01-28}
+}
+
+@online{TrinodbTrinoGitHubj,
+  title = {Trinodb/Trino on {{GitHub}}: {{Highlighted Source Code}} of Plugin/Trino-Hive/Src/Main/Java/Io/Trino/Plugin/Hive/{{HiveConfig}}.Java},
+  url = {https://github.com/trinodb/trino/blob/875fe1b8a891e3293f0baf48cb4eea7b815b8b3d/plugin/trino-hive/src/main/java/io/trino/plugin/hive/HiveConfig.java#L203-L209},
+  urldate = {2024-01-28}
+}
+
+@online{TrinodbTrinoGitHubk,
+  title = {Trinodb/Trino on {{GitHub}}: {{Highlighted Source Code}} of Plugin/Trino-Hive/Src/Main/Java/Io/Trino/Plugin/Hive/{{HiveSessionProperties}}.Java},
+  url = {https://github.com/trinodb/trino/blob/875fe1b8a891e3293f0baf48cb4eea7b815b8b3d/plugin/trino-hive/src/main/java/io/trino/plugin/hive/HiveSessionProperties.java#L402-L406},
+  urldate = {2024-01-28}
+}
+
+@online{TrinodbTrinoGitHubl,
+  title = {Trinodb/Trino on {{GitHub}}: {{Highlighted Source Code}} of Plugin/Trino-Hive/Src/Main/Java/Io/Trino/Plugin/Hive/{{HiveSessionProperties}}.Java},
+  url = {https://github.com/trinodb/trino/blob/875fe1b8a891e3293f0baf48cb4eea7b815b8b3d/plugin/trino-hive/src/main/java/io/trino/plugin/hive/HiveSessionProperties.java#L397-L401},
+  urldate = {2024-01-28}
+}
+
+@online{TrinodbTrinoGitHubm,
+  title = {Trinodb/Trino on {{GitHub}}: {{Highlighted Source Code}} of Plugin/Trino-Hudi/Src/Main/Java/Io/Trino/Plugin/Hudi/Split/{{HudiSplitFactory}}.Java},
+  url = {https://github.com/trinodb/trino/blob/1706df06e79c7b2ed9dc865ef46937124e471f06/plugin/trino-hudi/src/main/java/io/trino/plugin/hudi/split/HudiSplitFactory.java#L65},
+  urldate = {2024-01-28}
+}
+
+@online{TrinodbTrinoGitHubn,
+  title = {Trinodb/Trino on {{GitHub}}: {{Highlighted Source Code}} of Plugin/Trino-Hudi/Src/Main/Java/Io/Trino/Plugin/Hudi/Query/{{HudiReadOptimizedDirectoryLister}}.Java},
+  url = {https://github.com/trinodb/trino/blob/1706df06e79c7b2ed9dc865ef46937124e471f06/plugin/trino-hudi/src/main/java/io/trino/plugin/hudi/query/HudiReadOptimizedDirectoryLister.java#L83},
+  urldate = {2024-01-28}
+}
+
+@online{TrinodbTrinoGitHubo,
+  title = {Trinodb/Trino on {{GitHub}}: {{Highlighted Source Code}} of Plugin/Trino-Delta-Lake/Src/Main/Java/Io/Trino/Plugin/Deltalake/{{DeltaLakeConfig}}.Java},
+  url = {https://github.com/trinodb/trino/blob/875fe1b8a891e3293f0baf48cb4eea7b815b8b3d/plugin/trino-delta-lake/src/main/java/io/trino/plugin/deltalake/DeltaLakeConfig.java#L192-L198},
+  urldate = {2024-01-28}
+}
+
+@online{TrinodbTrinoGitHubp,
+  title = {Trinodb/Trino on {{GitHub}}: {{Highlighted Source Code}} of Plugin/Trino-Delta-Lake/Src/Main/Java/Io/Trino/Plugin/Deltalake/{{DeltaLakeSessionProperties}}.Java},
+  url = {https://github.com/trinodb/trino/blob/875fe1b8a891e3293f0baf48cb4eea7b815b8b3d/plugin/trino-delta-lake/src/main/java/io/trino/plugin/deltalake/DeltaLakeSessionProperties.java#L84-L88},
+  urldate = {2024-01-28}
+}
+
+@online{TrinodbTrinoGitHubq,
+  title = {Trinodb/Trino on {{GitHub}}: {{Highlighted Source Code}} of Plugin/Trino-Delta-Lake/Src/Main/Java/Io/Trino/Plugin/Deltalake/{{DeltaLakeSessionProperties}}.Java},
+  url = {https://github.com/trinodb/trino/blob/875fe1b8a891e3293f0baf48cb4eea7b815b8b3d/plugin/trino-delta-lake/src/main/java/io/trino/plugin/deltalake/DeltaLakeSessionProperties.java#L89-L93},
+  urldate = {2024-01-28}
+}
+
+@online{TrinoDocumentationDelta,
+  title = {Trino {{Documentation}}: {{Delta Lake Connector}}},
+  url = {https://trino.io/docs/430/connector/delta-lake.html},
+  urldate = {2024-01-08}
+}
+
+@online{TrinoDocumentationHive,
+  title = {Trino {{Documentation}}: {{Hive Connector}}},
+  url = {https://trino.io/docs/430/connector/hive.html},
+  urldate = {2024-01-08}
+}
+
+@online{TrinoDocumentationHudi,
+  title = {Trino {{Documentation}}: {{Hudi Connector}}},
+  url = {https://trino.io/docs/430/connector/hudi.html},
+  urldate = {2024-01-08}
+}
+
+@online{TrinoDocumentationIceberg,
+  title = {Trino {{Documentation}}: {{Iceberg Connector}}},
+  url = {https://trino.io/docs/430/connector/iceberg.html},
+  urldate = {2024-01-08}
+}
+
+@online{TrinoDocumentationSpill,
+  title = {Trino {{Documentation}}: {{Spill}} to Disk},
+  url = {https://trino.io/docs/430/admin/spill.html},
+  urldate = {2024-01-23}
+}
+
+@online{TrinoDocumentationSystem,
+  title = {Trino {{Documentation}}: {{System Connector}}},
+  url = {https://trino.io/docs/430/connector/system.html},
+  urldate = {2024-01-08}
+}
+
+@online{TrinoDocumentationTPCDS,
+  title = {Trino {{Documentation}}: {{TPC-DS Connector}}},
+  url = {https://trino.io/docs/430/connector/tpcds.html},
+  urldate = {2024-01-08}
+}
+
+@online{TrinoDocumentationTPCH,
+  title = {Trino {{Documentation}}: {{TPC-H Connector}}},
+  url = {https://trino.io/docs/430/connector/tpch.html},
+  urldate = {2024-01-08}
+}
+
+@online{UnderstandingInsightsBasic,
+  title = {Understanding Insights into the Basic Structure and Essential Issues of Table Placement Methods in Clusters | {{Proceedings}} of the {{VLDB Endowment}}},
+  url = {https://dl.acm.org/doi/10.14778/2556549.2556559},
+  urldate = {2024-01-14},
+  file = {/home/agrueneberg/Sync/Zotero/storage/R6Z6SRE5/Understanding insights into the basic structure an.pdf}
+}
+
+@inproceedings{vavilapalliApacheHadoopYARN2013,
+  title = {Apache {{Hadoop YARN}}: Yet Another Resource Negotiator},
+  shorttitle = {Apache {{Hadoop YARN}}},
+  booktitle = {Proceedings of the 4th Annual {{Symposium}} on {{Cloud Computing}}},
+  author = {Vavilapalli, Vinod Kumar and Murthy, Arun C. and Douglas, Chris and Agarwal, Sharad and Konar, Mahadev and Evans, Robert and Graves, Thomas and Lowe, Jason and Shah, Hitesh and Seth, Siddharth and Saha, Bikas and Curino, Carlo and O'Malley, Owen and Radia, Sanjay and Reed, Benjamin and Baldeschwieler, Eric},
+  date = {2013-10-01},
+  series = {{{SOCC}} '13},
+  pages = {1--16},
+  publisher = {{Association for Computing Machinery}},
+  location = {{New York, NY, USA}},
+  doi = {10.1145/2523616.2523633},
+  url = {https://doi.org/10.1145/2523616.2523633},
+  urldate = {2024-01-22},
+  abstract = {The initial design of Apache Hadoop [1] was tightly focused on running massive, MapReduce jobs to process a web crawl. For increasingly diverse companies, Hadoop has become the data and computational agorá---the de facto place where data and computational resources are shared and accessed. This broad adoption and ubiquitous usage has stretched the initial design well beyond its intended target, exposing two key shortcomings: 1) tight coupling of a specific programming model with the resource management infrastructure, forcing developers to abuse the MapReduce programming model, and 2) centralized handling of jobs' control flow, which resulted in endless scalability concerns for the scheduler. In this paper, we summarize the design, development, and current state of deployment of the next generation of Hadoop's compute platform: YARN. The new architecture we introduced decouples the programming model from the resource management infrastructure, and delegates many scheduling functions (e.g., task fault-tolerance) to per-application components. We provide experimental evidence demonstrating the improvements we made, confirm improved efficiency by reporting the experience of running YARN on production environments (including 100\% of Yahoo! grids), and confirm the flexibility claims by discussing the porting of several programming frameworks onto YARN viz. Dryad, Giraph, Hoya, Hadoop MapReduce, REEF, Spark, Storm, Tez.},
+  isbn = {978-1-4503-2428-1},
+  file = {/home/agrueneberg/Sync/Zotero/storage/X8RWQXPG/Vavilapalli et al. - 2013 - Apache Hadoop YARN yet another resource negotiato.pdf}
+}
+
+@inproceedings{vogelsgesangGetRealHow2018,
+  title = {Get {{Real}}: {{How Benchmarks Fail}} to {{Represent}} the {{Real World}}},
+  shorttitle = {Get {{Real}}},
+  booktitle = {Proceedings of the {{Workshop}} on {{Testing Database Systems}}},
+  author = {Vogelsgesang, Adrian and Haubenschild, Michael and Finis, Jan and Kemper, Alfons and Leis, Viktor and Muehlbauer, Tobias and Neumann, Thomas and Then, Manuel},
+  date = {2018-06-15},
+  pages = {1--6},
+  publisher = {{ACM}},
+  location = {{Houston TX USA}},
+  doi = {10.1145/3209950.3209952},
+  url = {https://dl.acm.org/doi/10.1145/3209950.3209952},
+  urldate = {2023-11-15},
+  eventtitle = {{{SIGMOD}}/{{PODS}} '18: {{International Conference}} on {{Management}} of {{Data}}},
+  isbn = {978-1-4503-5826-2},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/QNPQIHD6/Vogelsgesang et al. - 2018 - Get Real How Benchmarks Fail to Represent the Rea.pdf}
+}
+
+@inproceedings{vuppalapatiBuildingElasticQuery2020,
+  title = {Building an Elastic Query Engine on Disaggregated Storage},
+  booktitle = {Proceedings of the 17th {{Usenix Conference}} on {{Networked Systems Design}} and {{Implementation}}},
+  author = {Vuppalapati, Midhul and Miron, Justin and Agarwal, Rachit and Truong, Dan and Motivala, Ashish and Cruanes, Thierry},
+  date = {2020-02-25},
+  series = {{{NSDI}}'20},
+  pages = {449--462},
+  publisher = {{USENIX Association}},
+  location = {{USA}},
+  abstract = {We present operational experience running Snowflake, a cloud-based data warehousing system with SQL support similar to state-of-the-art databases. Snowflake design is motivated by three goals: (1) compute and storage elasticity; (2) support for multi-tenancy; and, (3) high performance. Over the last few years, Snowflake has grown to serve thousands of customers executing millions of queries on petabytes of data every day. This paper presents Snowflake design and implementation, along with a discussion on how recent changes in cloud infrastructure (emerging hardware, fine-grained billing, etc.) have altered the many assumptions that guided the design and optimization of Snowflake system. Using data collected from various components of our system during execution of 70 million queries over a 14 day period, our study both deepens the understanding of existing problems and highlights new research challenges along a multitude of dimensions including design of storage systems and high-performance query execution engines.},
+  isbn = {978-1-939133-13-7},
+  file = {/home/agrueneberg/Sync/Zotero/storage/AM72Q6LY/Vuppalapati et al. - 2020 - Building An Elastic Query Engine on Disaggregated .pdf}
+}
+
+@inproceedings{wangDisaggregatedDatabaseSystems2023,
+  title = {Disaggregated {{Database Systems}}},
+  booktitle = {Companion of the 2023 {{International Conference}} on {{Management}} of {{Data}}},
+  author = {Wang, Jianguo and Zhang, Qizhen},
+  date = {2023-06-04},
+  pages = {37--44},
+  publisher = {{ACM}},
+  location = {{Seattle WA USA}},
+  doi = {10.1145/3555041.3589403},
+  url = {https://dl.acm.org/doi/10.1145/3555041.3589403},
+  urldate = {2023-12-21},
+  abstract = {Disaggregated database systems achieve unprecedented excellence in elasticity and resource utilization at the cloud scale and have gained great momentum from both industry and academia recently. Such systems are developed in response to the emerging trend of disaggregated data centers where resources are physically separated and connected through fast data center networks. Database management systems have been traditionally built based on monolithic architectures, so disaggregation fundamentally challenges the designs. On the other hand, disaggregation offers benefits like independent scaling of compute, memory, and storage. Nonetheless, there is a lack of systematic investigation into new research challenges and opportunities in recent disaggregated database systems. To provide database researchers and practitioners with insights into different forms of resource disaggregation, we take a snapshot of state-of-the-art disaggregated database systems and related techniques and present an in-depth tutorial. The primary goal is to better understand the enabling techniques and characteristics of resource disaggregation and its implications for next-generation database systems. To that end, we survey recent work on storage disaggregation, which separates secondary storage devices (e.g., SSDs) from compute servers and is widely deployed in current cloud data centers, and memory disaggregation, which further splits compute and memory with Remote Direct Memory Access (RDMA) and is driving the transformation of clouds. In addition, we mention two techniques that bring novel perspectives to the above two paradigms: persistent memory and Compute Express Link (CXL). Finally, we identify several directions that shed light on the future development of disaggregated database systems.},
+  eventtitle = {{{SIGMOD}}/{{PODS}} '23: {{International Conference}} on {{Management}} of {{Data}}},
+  isbn = {978-1-4503-9507-6},
+  langid = {english},
+  keywords = {databases,memory disaggregation,storage disaggregation},
+  file = {/home/agrueneberg/Sync/Zotero/storage/849VR34V/Wang and Zhang - 2023 - Disaggregated Database Systems.pdf}
+}
+
+@article{weiningerIcebergDeltaLake,
+  entrysubtype = {magazine},
+  title = {Iceberg, {{Delta Lake}}, {{Hudi}}: {{Warum}} Sind Offene {{Tabellenformate}} Eine Gute {{Grundlage}} Für {{Analysen}}},
+  author = {Weininger, Andreas},
+  journaltitle = {BI-SPEKTRUM},
+  volume = {4/2023},
+  file = {/home/agrueneberg/Sync/Zotero/storage/VASSSS6F/Iceberg, Delta Lake, Hudi.docx}
+}
+
+@book{wickhamGgplot22016,
+  title = {Ggplot2},
+  author = {Wickham, Hadley},
+  date = {2016},
+  series = {Use {{R}}!},
+  publisher = {{Springer International Publishing}},
+  location = {{Cham}},
+  doi = {10.1007/978-3-319-24277-4},
+  url = {http://link.springer.com/10.1007/978-3-319-24277-4},
+  urldate = {2023-12-29},
+  isbn = {978-3-319-24275-0 978-3-319-24277-4},
+  keywords = {base graphics,data analysis of graphics,ggplot2 1.0,grammar of graphics,knitr,lattice graphics,multi-layer graphs,RStudio,statistical graphics,visualization},
+  file = {/home/agrueneberg/Sync/Zotero/storage/ED2D55VC/Wickham - 2016 - ggplot2.pdf}
+}
+
+@article{wickhamWelcomeTidyverse2019,
+  title = {Welcome to the {{tidyverse}}},
+  author = {Wickham, Hadley and Averick, Mara and Bryan, Jennifer and Chang, Winston and McGowan, Lucy D'Agostino and François, Romain and Grolemund, Garrett and Hayes, Alex and Henry, Lionel and Hester, Jim and Kuhn, Max and Pedersen, Thomas Lin and Miller, Evan and Bache, Stephan Milton and Müller, Kirill and Ooms, Jeroen and Robinson, David and Seidel, Dana Paige and Spinu, Vitalie and Takahashi, Kohske and Vaughan, Davis and Wilke, Claus and Woo, Kara and Yutani, Hiroaki},
+  date = {2019},
+  journaltitle = {Journal of Open Source Software},
+  volume = {4},
+  number = {43},
+  pages = {1686},
+  doi = {10.21105/joss.01686}
+}
+
+@inproceedings{xinSharkSQLRich2013,
+  title = {Shark: {{SQL}} and Rich Analytics at Scale},
+  shorttitle = {Shark},
+  booktitle = {Proceedings of the 2013 {{ACM SIGMOD International Conference}} on {{Management}} of {{Data}}},
+  author = {Xin, Reynold S. and Rosen, Josh and Zaharia, Matei and Franklin, Michael J. and Shenker, Scott and Stoica, Ion},
+  date = {2013-06-22},
+  series = {{{SIGMOD}} '13},
+  pages = {13--24},
+  publisher = {{Association for Computing Machinery}},
+  location = {{New York, NY, USA}},
+  doi = {10.1145/2463676.2465288},
+  url = {https://dl.acm.org/doi/10.1145/2463676.2465288},
+  urldate = {2023-12-30},
+  abstract = {Shark is a new data analysis system that marries query processing with complex analytics on large clusters. It leverages a novel distributed memory abstraction to provide a unified engine that can run SQL queries and sophisticated analytics functions (e.g. iterative machine learning) at scale, and efficiently recovers from failures mid-query. This allows Shark to run SQL queries up to 100X faster than Apache Hive, and machine learning programs more than 100X faster than Hadoop. Unlike previous systems, Shark shows that it is possible to achieve these speedups while retaining a MapReduce-like execution engine, and the fine-grained fault tolerance properties that such engine provides. It extends such an engine in several ways, including column-oriented in-memory storage and dynamic mid-query replanning, to effectively execute SQL. The result is a system that matches the speedups reported for MPP analytic databases over MapReduce, while offering fault tolerance properties and complex analytics capabilities that they lack.},
+  isbn = {978-1-4503-2037-5},
+  keywords = {data warehouse,databases,hadoop,machine learning,shark,spark},
+  file = {/home/agrueneberg/Sync/Zotero/storage/YEDGTL9R/Xin et al. - 2013 - Shark SQL and rich analytics at scale.pdf}
+}
+
+@article{zahariaApacheSparkUnified2016,
+  title = {Apache {{Spark}}: A Unified Engine for Big Data Processing},
+  shorttitle = {Apache {{Spark}}},
+  author = {Zaharia, Matei and Xin, Reynold S. and Wendell, Patrick and Das, Tathagata and Armbrust, Michael and Dave, Ankur and Meng, Xiangrui and Rosen, Josh and Venkataraman, Shivaram and Franklin, Michael J. and Ghodsi, Ali and Gonzalez, Joseph and Shenker, Scott and Stoica, Ion},
+  date = {2016-10-28},
+  journaltitle = {Communications of the ACM},
+  shortjournal = {Commun. ACM},
+  volume = {59},
+  number = {11},
+  pages = {56--65},
+  issn = {0001-0782},
+  doi = {10.1145/2934664},
+  url = {https://dl.acm.org/doi/10.1145/2934664},
+  urldate = {2024-01-22},
+  abstract = {This open source computing framework unifies streaming, batch, and interactive big data workloads to unlock new applications.},
+  file = {/home/agrueneberg/Sync/Zotero/storage/CRWCAGGI/Zaharia et al. - 2016 - Apache Spark a unified engine for big data proces.pdf}
+}
+
+@inproceedings{zahariaResilientDistributedDatasets2012,
+  title = {Resilient Distributed Datasets: A Fault-Tolerant Abstraction for in-Memory Cluster Computing},
+  shorttitle = {Resilient Distributed Datasets},
+  booktitle = {Proceedings of the 9th {{USENIX}} Conference on {{Networked Systems Design}} and {{Implementation}}},
+  author = {Zaharia, Matei and Chowdhury, Mosharaf and Das, Tathagata and Dave, Ankur and Ma, Justin and McCauley, Murphy and Franklin, Michael J. and Shenker, Scott and Stoica, Ion},
+  date = {2012-04-25},
+  series = {{{NSDI}}'12},
+  pages = {2},
+  publisher = {{USENIX Association}},
+  location = {{USA}},
+  abstract = {We present Resilient Distributed Datasets (RDDs), a distributed memory abstraction that lets programmers perform in-memory computations on large clusters in a fault-tolerant manner. RDDs are motivated by two types of applications that current computing frameworks handle inefficiently: iterative algorithms and interactive data mining tools. In both cases, keeping data in memory can improve performance by an order of magnitude. To achieve fault tolerance efficiently, RDDs provide a restricted form of shared memory, based on coarse-grained transformations rather than fine-grained updates to shared state. However, we show that RDDs are expressive enough to capture a wide class of computations, including recent specialized programming models for iterative jobs, such as Pregel, and new applications that these models do not capture. We have implemented RDDs in a system called Spark, which we evaluate through a variety of user applications and benchmarks.},
+  file = {/home/agrueneberg/Sync/Zotero/storage/KUSZ78FX/Zaharia et al. - 2012 - Resilient distributed datasets a fault-tolerant a.pdf}
+}
+
+@online{zengEmpiricalEvaluationColumnar2023,
+  title = {An {{Empirical Evaluation}} of {{Columnar Storage Formats}}},
+  author = {Zeng, Xinyu and Hui, Yulong and Shen, Jiahong and Pavlo, Andrew and McKinney, Wes and Zhang, Huanchen},
+  date = {2023-11-07},
+  eprint = {2304.05028},
+  eprinttype = {arxiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.2304.05028},
+  url = {http://arxiv.org/abs/2304.05028},
+  urldate = {2023-11-15},
+  abstract = {Columnar storage is a core component of a modern data analytics system. Although many database management systems (DBMSs) have proprietary storage formats, most provide extensive support to open-source storage formats such as Parquet and ORC to facilitate cross-platform data sharing. But these formats were developed over a decade ago, in the early 2010s, for the Hadoop ecosystem. Since then, both the hardware and workload landscapes have changed. In this paper, we revisit the most widely adopted open-source columnar storage formats (Parquet and ORC) with a deep dive into their internals. We designed a benchmark to stress-test the formats' performance and space efficiency under different workload configurations. From our comprehensive evaluation of Parquet and ORC, we identify design decisions advantageous with modern hardware and real-world data distributions. These include using dictionary encoding by default, favoring decoding speed over compression ratio for integer encoding algorithms, making block compression optional, and embedding finer-grained auxiliary data structures. We also point out the inefficiencies in the format designs when handling common machine learning workloads and using GPUs for decoding. Our analysis identified important considerations that may guide future formats to better fit modern technology trends.},
+  pubstate = {preprint},
+  keywords = {Computer Science - Databases},
+  file = {/home/agrueneberg/Sync/Zotero/storage/5YPGMFH3/Zeng et al. - 2023 - An Empirical Evaluation of Columnar Storage Format.pdf;/home/agrueneberg/Sync/Zotero/storage/HZNCKIUG/Zeng et al. - An Empirical Evaluation of Columnar Storage Format.pdf;/home/agrueneberg/Sync/Zotero/storage/GDJN7RAU/2304.html}
+}
+
+@article{ziauddinDimensionsBasedData2017,
+  title = {Dimensions Based Data Clustering and Zone Maps},
+  author = {Ziauddin, Mohamed and Witkowski, Andrew and Kim, You Jung and Potapov, Dmitry and Lahorani, Janaki and Krishna, Murali},
+  date = {2017-08},
+  journaltitle = {Proceedings of the VLDB Endowment},
+  shortjournal = {Proc. VLDB Endow.},
+  volume = {10},
+  number = {12},
+  pages = {1622--1633},
+  issn = {2150-8097},
+  doi = {10.14778/3137765.3137769},
+  url = {https://dl.acm.org/doi/10.14778/3137765.3137769},
+  urldate = {2023-11-15},
+  abstract = {In recent years, the data warehouse industry has witnessed decreased use of indexing but increased use of compression and clustering of data facilitating efficient data access and data pruning in the query processing area. A classic example of data pruning is the partition pruning, which is used when table data is range or list partitioned. But lately, techniques have been developed to prune data at a lower granularity than a table partition or sub-partition. A good example is the use of data pruning structure called zone map. A zone map prunes zones of data from a table on which it is defined. Data pruning via zone map is very effective when the table data is clustered by the filtering columns.},
+  langid = {english},
+  file = {/home/agrueneberg/Sync/Zotero/storage/YRP9GC7D/Ziauddin et al. - 2017 - Dimensions based data clustering and zone maps.pdf}
+}

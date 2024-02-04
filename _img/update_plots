@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+set -eu
+
+RESULTS_DIR="$HOME/Sync/HFU/WS2324/Thesis/Results"
+
+# tpch
+cp -v "$RESULTS_DIR"/trino/TPC-H/tpch/sf100/plots/sar_delta_u.svg tpch/sar_delta_cpu.svg
+cp -v "$RESULTS_DIR"/trino/TPC-H/tpch/sf100/plots/sar_delta_n.svg tpch/sar_delta_network.svg
+
+# scalability_table_formats
+cp -v "$RESULTS_DIR"/many_ops/results_1/plots/"Many Inserts.svg" scalability_table_formats/many_inserts.svg
+cp -v "$RESULTS_DIR"/many_ops/results_1/plots/"Many Deletes.svg" scalability_table_formats/many_deletes.svg
+cp -v "$RESULTS_DIR"/many_ops/results_1/plots/"Many Updates.svg" scalability_table_formats/many_updates.svg
+cp -v "$RESULTS_DIR"/many_ops/results_1/plots/"Many Inserts (Partitioned).svg" scalability_table_formats/many_inserts_partitioned.svg
+cp -v "$RESULTS_DIR"/many_ops/results_1/plots/du_wo_hudi.svg scalability_table_formats/du_wo_hudi.svg
+cp -v "$RESULTS_DIR"/many_ops/results_1000000/plots/"Many Inserts.svg" scalability_table_formats/many_inserts_1000000.svg
+cp -v "$RESULTS_DIR"/many_ops/results_1000000/plots/"Many Deletes.svg" scalability_table_formats/many_deletes_1000000.svg
+cp -v "$RESULTS_DIR"/many_ops/results_1000000/plots/"Many Updates.svg" scalability_table_formats/many_updates_1000000.svg
+
+# mitigations
+cp -v "$RESULTS_DIR"/hudi_hmt/num_reqs.svg mitigations/hudi_hmt/num_reqs.svg
+cp -v "$RESULTS_DIR"/hudi_hmt/times.svg mitigations/hudi_hmt/times.svg
+cp -v "$RESULTS_DIR"/iceberg_rewrite_position_delete_files/num_reqs.svg mitigations/iceberg_rewrite_position_delete_files/num_reqs.svg
+cp -v "$RESULTS_DIR"/iceberg_rewrite_position_delete_files/times.svg mitigations/iceberg_rewrite_position_delete_files/times.svg
+cp -v "$RESULTS_DIR"/delta_checkpointing/num_reqs.svg mitigations/delta_checkpointing/num_reqs.svg
+cp -v "$RESULTS_DIR"/delta_checkpointing/times.svg mitigations/delta_checkpointing/times.svg
+
+# minio
+cp -v "$RESULTS_DIR"/minio/list_objects/list_objects.svg minio/list_objects.svg
+cp -v "$RESULTS_DIR"/minio/get_object/get_object.svg minio/get_object.svg
+
+# request_types
+cp -v "$RESULTS_DIR"/many_ops/results_1/plots/"Many Inserts"/trace_select_reqs.svg request_types/many_inserts_scan.svg
+cp -v "$RESULTS_DIR"/many_ops/results_1/plots/"Many Inserts"/trace_op_reqs.svg request_types/many_inserts_op.svg
+cp -v "$RESULTS_DIR"/many_ops/results_1/plots/"Many Deletes"/trace_select_reqs.svg request_types/many_deletes_scan.svg
+cp -v "$RESULTS_DIR"/many_ops/results_1/plots/"Many Deletes"/trace_op_reqs.svg request_types/many_deletes_op.svg
+cp -v "$RESULTS_DIR"/many_ops/results_1/plots/"Many Updates"/trace_select_reqs.svg request_types/many_updates_scan.svg
+cp -v "$RESULTS_DIR"/many_ops/results_1/plots/"Many Updates"/trace_op_reqs.svg request_types/many_updates_op.svg
+cp -v "$RESULTS_DIR"/many_ops/results_1/plots/"Many Inserts (Partitioned)"/trace_select_reqs.svg request_types/many_inserts_partitioned_scan.svg
+cp -v "$RESULTS_DIR"/many_ops/results_1/plots/"Many Inserts (Partitioned)"/trace_op_reqs.svg request_types/many_inserts_partitioned_op.svg
+
+echo "Done!"
