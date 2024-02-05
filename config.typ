@@ -10,5 +10,5 @@
 #let city = "Villingen-Schwenningen"
 #let referent = "Prof. Dr. Lothar Piepmeyer"
 #let koreferent = "Dr. Andreas Weininger"
-#let submissiondate = "29.02.2024"
+#let submissiondate = "06.02.2024"
 #let emailaddress = "hfu@agrueneberg.info"
