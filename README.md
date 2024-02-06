@@ -2,7 +2,8 @@
 
 ## Requirements
 
-- The Latin Modern Fonts (`otf-latin-modern` in ArchLinux)
+- Typst (`typst` in Arch Linux)
+- The Latin Modern Fonts (`otf-latin-modern` in Arch Linux)
 
 ## Setup
 
